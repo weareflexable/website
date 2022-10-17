@@ -2,7 +2,7 @@ import React from "react";
 
 const Home1 = () => {
   return (
-    <div>
+    <div name ="home">
       <div className="w-full bg-cover  bg-white py-16 px-4">
         <div className="max-w-[1240px] mx-auto grid md:grid-cols-2">
           <div className="flex flex-col justify-center">

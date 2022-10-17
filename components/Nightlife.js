@@ -3,7 +3,7 @@ import React from "react";
 const Nightlife = () => {
   return (
     <>
-      <div className="bg-white">
+      <div name='nightlife' className="bg-white  mt-12 pt-12">
         <div className="items-center text-center pt-10">
           <h1 className="text-black italic text-6xl font-bold">
             Nightlife
@@ -23,10 +23,10 @@ const Nightlife = () => {
             Click below to find participating venues in your area.
             <br />
             <button
-            type="submit"
+            type="Search"
             className="text-white bg-black hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm w-full sm:w-auto px-5 py-2.5 mt-3 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800  animate-pulse"
           >
-            Submit
+            Search
           </button>
           </p>
         </div>

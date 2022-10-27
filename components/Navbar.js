@@ -13,8 +13,8 @@ const Navbar = () => {
     <div className="w-screen h-[80px] z-10 bg-gradient-to-r from-purple-100 via-purple-200 to bg-purple-100 fixed drop-shadow-lg">
       <div className="px-2 flex justify-between items-center w-full h-full">
         <div className="flex items-center">
-          <h1 className="text-3xl font-bold italic mr-4 sm:text-4xl">Flexable</h1>
-          <ul className="hidden md:flex font-serif mx-10 text-xl p-5 md:space-x-8">
+          <h1 className="text-3xl ml-7 font-bold italic mr-10 sm:text-4xl">Flexable</h1>
+          <ul className="hidden text-black md:flex ml-20 pl-32   mx-10 text-xl p-5 md:space-x-8">
             <li>
               <Link to="home" smooth={true} duration={500} class="cursor-pointer">
                 Home
@@ -54,17 +54,17 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="hidden md:flex pr-4">
-          <button className="border px-4 py-1 rounded-full hover:text-purple-600 hover:border-purple-600 italic bg-transparent text-xl text-black mr-4">
+          <button className="text-white bg-purple-600 hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full mx-5 text-xl italic px-5 py-2.5 text-center mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">
             Sign In
           </button>
-          <button className="px-8 italic border rounded-full hover:text-purple-600 hover:border-purple-600 text-xl py-3">Sign Up</button>
+          <button className="text-white bg-purple-600 hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-xl italic  px-5 py-2.5 text-center mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900 mr-5">Sign Up</button>
         </div>
         <div className="md:hidden mr-4" onClick={handleClick}>
           {!nav ? <MenuIcon className="w-5" /> : <XIcon className="w-5" />}
         </div>
       </div>
 
-      <ul className={!nav ? "hidden" : "absolute bg-zinc-200 w-full px-8"}>
+      <ul className={!nav ? "hidden" : "absolute text-black bg-zinc-200 w-full px-8"}>
         <li className="border-b-2 border-zinc-300 w-full">
           <Link onClick={handleClose} to="home" smooth={true} duration={500} class="cursor-pointer"
           >
@@ -133,10 +133,10 @@ const Navbar = () => {
         </li>
 
         <div className="flex flex-col my-4">
-          <button className="bg-transparent text-indigo-600 px-8 py-3 mb-4">
+          <button className="bg-transparent text-black hover:text-purple-800 px-8 ">
             Sign In
           </button>
-          <button className="px-8 py-3">Sign Up</button>
+          <button className="bg-transparent text-black hover:text-purple-800 px-8 ">Sign Up</button>
         </div>
       </ul>
     </div>

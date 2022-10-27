@@ -7,6 +7,8 @@ import Restaurants from "../components/Restaurants";
 import Greeklife from "../components/Greeklife";
 import Aboutus from "../components/Aboutus";
 import Partnerwithus from "../components/Partnerwithus";
+import Footer from "../components/Footer";
+import Contactus from "../components/Contactus";
 
 export default function Home() {
   return (
@@ -24,6 +26,8 @@ export default function Home() {
     <Greeklife></Greeklife>
     <Aboutus></Aboutus>
     <Partnerwithus></Partnerwithus>
+    <Contactus></Contactus>
+    <Footer></Footer>
     </>
     
   );

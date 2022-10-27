@@ -2,20 +2,38 @@ import React from "react";
 
 const Howitworks = () => {
   return (
-    <div className="bg-[#b66ffc] py-10 text-center ">
-      <h1 className="pb-5 text-black bold text-4xl">How it works ?</h1>
-      <div className="mx-24 py-8  text-2xl max-h-30 bg-white rounded-full text-justify px-10">
-        <ul className="list-disc italic mx-5">
-          <li>Pick your venue</li>
-          <li>
-            Purchase your Digital Access Token (DAT) - Pay with credit card,
-            Apple Pay & Google Pay
-          </li>
-          <li>Locate your DAT in your wallet</li>
-          <li>Redeem your DAT through a QR code</li>
-        </ul>
+    <>
+      <div name="about" className="w-full mt-5 pt-5">
+        <div className="max-w-[1240px] mx-auto pt-3">
+          <div className="text-center">
+            <h2 className="text-black italic text-6xl font-bold">
+              How it Works
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-4 gap-4   mt-8 pt-8 pb-20 text-center">
+            <div className="border py-8 rounded-xl shadow-xl hover:scale-105 duration-300">
+              <p className="text-black text-2xl  mt-2">Step 1</p>
+              <p className="text-3xl mt-3 italic  text-[#8109f8]">Pick your venue</p>
+            </div>
+            <div className="border py-8 rounded-xl shadow-xl hover:scale-105 duration-300">
+              <p className="text-black  text-2xl  mt-2">Step 2</p>
+              <p className="text-3xl mt-3 italic  text-[#8109f8]">Purchase your Digital Access Token (DAT)-<br></br>Pay with credit card, Apple Pay & Google Pay
+</p>
+            </div>
+            <div className="border py-8 rounded-xl shadow-xl hover:scale-105 duration-300">
+              <p className="text-black  text-2xl  mt-2">Step 3</p>
+              <p className="text-3xl mt-3 italic  text-[#8109f8]">Locate your DAT in your wallet</p>
+            </div>
+            <div className="border py-8 rounded-xl shadow-xl hover:scale-105 duration-300">
+              <p className="text-black  text-2xl  mt-2">Step 4</p>
+              <p className="text-3xl mt-3 italic  text-[#8109f8]">Redeem your DAT through a QR code</p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+      <hr className="h-1 mx-20 animate-pulse bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500  " />
+    </>
   );
 };
 

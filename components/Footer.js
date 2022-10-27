@@ -1,94 +1,95 @@
 import React from "react";
+import Link from 'next/link';
 
 const Footer = () => {
   return (
     <div>
-      <footer class="p-4 bg-white sm:p-6 dark:bg-gray-900">
-        <div class="md:flex md:justify-between">
-          <div class="mb-6 md:mb-0">
-            <a href="https://flowbite.com/" class="flex items-center">
+      <footer className="p-4 bg-white sm:p-6 dark:bg-gray-900">
+        <div className="md:flex md:justify-between">
+          <div className="mb-6 md:mb-0">
+            <Link href="/" className="flex items-center">
               
-              <span class="self-center italic text-4xl ml-10 font-semibold whitespace-nowrap dark:text-white">
-                Flexable
+              <span className="self-center italic text-4xl ml-10 font-semibold whitespace-nowrap dark:text-white">
+                <a>Flexable</a>
               </span>
-            </a>
+            </Link>
           </div>
-          <div class="grid grid-cols-2 gap-6 mr-10 sm:gap-6 sm:grid-cols-2">
+          <div className="grid grid-cols-2 gap-6 mr-10 sm:gap-6 sm:grid-cols-2">
             {/* <div>
-              <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
                 Resources
               </h2>
-              <ul class="text-black dark:text-gray-400">
-                <li class="mb-4">
-                  <a href="https://flowbite.com/" class="hover:underline">
+              <ul className="text-black dark:text-gray-400">
+                <li className="mb-4">
+                  <Link href="https://flowbite.com/" className="hover:underline">
                     Flowbite
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="https://tailwindcss.com/" class="hover:underline">
+                  <Link href="https://tailwindcss.com/" className="hover:underline">
                     Tailwind CSS
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div> */}
             <div>
-              <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
                 Follow us
               </h2>
-              <ul class="text-black dark:text-gray-400">
-                <li class="mb-4">
-                  <a
+              <ul className="text-black dark:text-gray-400">
+                <li className="mb-4">
+                  <Link
                     href="https://github.com/themesberg/flowbite"
-                    class="hover:underline "
+                    className="hover:underline "
                   >
-                    Facebook
-                  </a>
+                    <a>Facebook</a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     href="https://discord.gg/4eeurUVvTy"
-                    class="hover:underline"
+                    className="hover:underline"
                   >
-                    Discord
-                  </a>
+                    <a>Discord</a>
+                  </Link>
                 </li>
               </ul>
             </div>
             <div>
-              <h2 class="mb-6 text-sm font-semibold text-black uppercase dark:text-white">
+              <h2 className="mb-6 text-sm font-semibold text-black uppercase dark:text-white">
                 Legal
               </h2>
-              <ul class="text-black dark:text-gray-400">
-                <li class="mb-4">
-                  <a href="#" class="hover:underline">
-                    Privacy Policy
-                  </a>
+              <ul className="text-black dark:text-gray-400">
+                <li className="mb-4">
+                  <Link href="#" className="hover:underline">
+                    <a>Privacy Policy</a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" class="hover:underline">
-                    Terms &amp; Conditions
-                  </a>
+                  <Link href="#" className="hover:underline">
+                    <a>Terms &amp; Conditions</a>
+                  </Link>
                 </li>
               </ul>
             </div>
           </div>
         </div>
-        <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-        <div class="sm:flex sm:items-center sm:justify-between">
-          <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+        <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+        <div className="sm:flex sm:items-center sm:justify-between">
+          <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
             © 2022{" "}
-            <a href="/" class="hover:underline">
-              Flexable
-            </a>
+            <Link href="/" className="hover:underline">
+              <a>Flexable</a>
+            </Link>
             . All Rights Reserved.
           </span>
-          <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
-            <a
+          <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
+            <Link
               href="#"
-              class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+              className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
             >
-              <svg
-                class="w-5 h-5"
+              <a><svg
+                className="w-5 h-5"
                 fill="currentColor"
                 viewBox="0 0 24 24"
                 aria-hidden="true"
@@ -99,14 +100,14 @@ const Footer = () => {
                   clip-rule="evenodd"
                 ></path>
               </svg>
-              <span class="sr-only">Facebook page</span>
-            </a>
-            <a
+              <span className="sr-only">Facebook page</span></a>
+            </Link>
+            <Link
               href="#"
-              class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+              className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
             >
-              <svg
-                class="w-5 h-5"
+              <a><svg
+                className="w-5 h-5"
                 fill="currentColor"
                 viewBox="0 0 24 24"
                 aria-hidden="true"
@@ -117,22 +118,22 @@ const Footer = () => {
                   clip-rule="evenodd"
                 ></path>
               </svg>
-              <span class="sr-only">Instagram page</span>
-            </a>
-            <a
+              <span className="sr-only">Instagram page</span></a>
+            </Link>
+            <Link
               href="#"
-              class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+              className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
             >
-              <svg
-                class="w-5 h-5"
+             <a> <svg
+                className="w-5 h-5"
                 fill="currentColor"
                 viewBox="0 0 24 24"
                 aria-hidden="true"
               >
                 <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
               </svg>
-              <span class="sr-only">Twitter page</span>
-            </a>
+              <span className="sr-only">Twitter page</span></a>
+            </Link>
             
             
           </div>

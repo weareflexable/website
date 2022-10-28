@@ -134,10 +134,10 @@ const Navbar = () => {
         </li>
 
         <div className="flex flex-col my-4">
-          <button className="bg-transparent text-black hover:text-purple-800 px-8 ">
+        <a href="https://marketplace.flexabledats.com/"><button className="bg-transparent text-black hover:text-purple-800 px-8 ">
             Sign In
-          </button>
-          <button className="bg-transparent text-black hover:text-purple-800 px-8 ">Sign Up</button>
+          </button></a>
+          <a href="https://marketplace.flexabledats.com/"><button className="bg-transparent text-black hover:text-purple-800 px-8 ">Sign Up</button></a>
         </div>
       </ul>
     </div>

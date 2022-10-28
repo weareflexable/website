@@ -7,9 +7,9 @@ const Footer = () => {
       <footer className="p-4 bg-white sm:p-6 dark:bg-gray-900">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
-            <Link href="/" className="flex items-center">
+            <Link href="/" className="flex items-center ">
               
-              <span className="self-center italic text-4xl ml-10 font-semibold whitespace-nowrap dark:text-white">
+              <span className="self-center italic cursor-pointer text-4xl ml-10 font-semibold whitespace-nowrap dark:text-white">
                 <a>Flexable</a>
               </span>
             </Link>

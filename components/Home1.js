@@ -16,9 +16,10 @@ const Home1 = () => {
               It&apos;s Time to enjoy with Flexable !
             </h1>
             <p>Discover the best places near your locality</p>
-            <button className="bg-purple-600 hover:bg-purple-800 text-white w-[200px] text- 3xl rounded-full font-medium my-6 mx-auto md:mx-0 py-3">
+            <a href="https://marketplace.flexabledats.com/"><button className="bg-purple-600 hover:bg-purple-800 text-white w-[200px] text- 3xl rounded-full font-medium my-6 mx-auto md:mx-0 py-3">
               Explore Now
             </button>
+            </a>
           </div>
           <img
             className="w-[1000px] animate-pulse mx-auto my-4 rounded-full mt-10 pt-5"

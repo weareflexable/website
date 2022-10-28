@@ -38,7 +38,7 @@ const Nightlife = () => {
             <br />
            
           </p>
-          <div className="flex justify-center mt-5"> <button className=' text-2xl border rounded-full  bg-purple-600 hover:bg-purple-800 shadow-lg p-2 text-white w-40  mt-2'>Search</button></div>
+          <div className="flex justify-center mt-5"> <a href="https://marketplace.flexabledats.com/"><button className=' text-2xl border rounded-full  bg-purple-600 hover:bg-purple-800 shadow-lg p-2 text-white w-40  mt-2'>Search</button></a></div>
          
         </div>
       </div>

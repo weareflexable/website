@@ -1,3 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.main_bg {
+  background: #494753;
+  background: linear-gradient(95deg, #373641 0%, #232323 50%);
+}
+
+.btn_primary {
+  background: #17ffa6;
+  background: linear-gradient(193deg, #17ffa6 15%, #29b27e 89%);
+}
+
+.btn_primary_outline {
+  background: transparent;
+  border: 3px solid linear-gradient(193deg, #17ffa6 15%, #29b27e 89%);
+}

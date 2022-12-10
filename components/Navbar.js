@@ -21,13 +21,16 @@ const Navbar = () => {
           return;
         }
       }
-      closeMenu();
     };
     document.addEventListener("mousedown", handleClick);
     return () => {
       document.removeEventListener("mousedown", handleClick);
     };
   }, []);
+
+  const closeBurger = () => {
+    closeMenu();
+  };
 
   return (
     <div className="py-4">
@@ -43,7 +46,7 @@ const Navbar = () => {
         <div className="hidden sm:block">
           <ContentSidebar toggleMenu={toggleMenu} />
         </div>
-        <div className="block sm:hidden cursor-pointer mb-20">
+        <div className="block sm:hidden cursor-pointer mb-20 z-50">
           <Image
             onClick={toggleMenu}
             src="/menu.svg"
@@ -83,15 +86,15 @@ const Navbar = () => {
 const ContentSidebar = ({ toggleMenu }) => {
   return (
     <div className="items-center flex-col sm:flex-row flex font-figtree -mt-14">
-      <Link href="/#nightlife">
+      <Link href="/#nightlife" scroll={false}>
         <a className="mb-3 sm:mb-0 mt-4 sm:mt-0 ml-0 sm:ml-7">Nightlife</a>
       </Link>
-      <Link href="/#restaurants">
+      <Link href="#restaurants" scroll={false}>
         <a onClick={toggleMenu} className="mb-3 sm:mb-0 ml-0 sm:ml-7">
           Restaurants
         </a>
       </Link>
-      <Link href="/#events">
+      <Link href="#events" scroll={false}>
         <a
           onClick={toggleMenu}
           className="mb-3 sm:mb-0 ml-0 sm:ml-7 mr-0 sm:mr-7"
@@ -99,7 +102,7 @@ const ContentSidebar = ({ toggleMenu }) => {
           Events
         </a>
       </Link>
-      <Link href="/about">
+      <Link href="#about">
         <a
           onClick={toggleMenu}
           className="mb-3 sm:mb-0 ml-0 lg:ml-0 mr-0 sm:mr-7"
@@ -107,7 +110,7 @@ const ContentSidebar = ({ toggleMenu }) => {
           About Us
         </a>
       </Link>
-      <Link href="/#partner">
+      <Link href="#partner">
         <a
           onClick={toggleMenu}
           className="mb-3 sm:mb-0 ml-0 lg:ml-0 mr-0 sm:mr-7"

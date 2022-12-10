@@ -6,7 +6,7 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      pacifico: ["Pacifico"],
+      figtree: ["Figtree"],
     },
     extend: {
       colors: {

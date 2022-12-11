@@ -9,6 +9,11 @@ module.exports = {
       figtree: ["Figtree"],
     },
     extend: {
+      backgroundImage: {
+        landing: "url('/club.jpeg')",
+        restaurant: "url('/restaurant.jpeg')",
+        nightlife: "url('/nightlife.jpeg')",
+      },
       colors: {
         primary: {
           300: "#494753",

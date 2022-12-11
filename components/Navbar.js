@@ -34,7 +34,7 @@ const Navbar = () => {
 
   return (
     <div className="py-4">
-      <Container className="flex justify-between items-center">
+      <Container className="flex justify-between items-center ">
         <div className="-mt-14 -ml-20">
           <Image
             src="/logos/FlexableLogoWhite.svg"
@@ -121,12 +121,16 @@ const ContentSidebar = ({ toggleMenu }) => {
       <Button
         className="mb-3 sm:mb-0 ml-0 lg:ml-0 mr-0 sm:mr-7 text-black"
         variant={"primary"}
+        isLink
+        href={"https://marketplace.flexabledats.com/"}
       >
         Sign In
       </Button>
       <Button
         className="mb-3 sm:mb-0 ml-0 lg:ml-0 mr-0 sm:mr-7 text-black"
         variant={"primary"}
+        isLink
+        href={"https://marketplace.flexabledats.com/"}
       >
         Sign Up
       </Button>

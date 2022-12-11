@@ -9,12 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.5",
     "@heroicons/react": "v1",
     "next": "12.3.1",
     "react": "18.2.0",
+    "react-awesome-reveal": "^4.1.0",
     "react-dom": "18.2.0",
-    "react-icons": "^4.6.0",
-    "react-scroll": "^1.8.7"
+    "react-icons": "^4.6.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.12",

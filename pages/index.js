@@ -1,34 +1,27 @@
-import Head from "next/head";
 import Navbar from "../components/Navbar";
-import Home1 from "../components/Home1";
-import Howitworks from "../components/Howitworks";
+import Hero from "../components/Hero";
+import Howto from "../components/Howto";
 import Nightlife from "../components/Nightlife";
 import Restaurants from "../components/Restaurants";
-import Greeklife from "../components/Greeklife";
-import Aboutus from "../components/Aboutus";
-import Partnerwithus from "../components/Partnerwithus";
+import Events from "../components/Events";
+import About from "../components/About";
+import Partner from "../components/Partner";
 import Footer from "../components/Footer";
-import Contactus from "../components/Contactus";
+import Container from "../components/Container";
+import Contact from "../components/Contact";
 
 export default function Home() {
   return (
-    <>
-    <Head>
-      <title>Flexable</title>
-      <meta name="description" content="Why wait in the line when you could just... not." />
-      <link rel="icon" href="/logo1.png" />
-    </Head>
-    <Navbar></Navbar>
-    <Home1></Home1>
-    <Howitworks></Howitworks>
-    <Nightlife></Nightlife>
-    <Restaurants></Restaurants>
-    <Greeklife></Greeklife>
-    <Aboutus></Aboutus>
-    <Partnerwithus></Partnerwithus>
-    <Contactus></Contactus>
-    <Footer></Footer>
-    </>
-    
+    <div className="h-full main_bg text-white overflow-hidden" id="top">
+      <Navbar />
+      <Hero />
+      <Howto />
+      <Nightlife />
+      <Restaurants />
+      <Events />
+      <About />
+      <Partner />
+      <Footer />
+    </div>
   );
 }

@@ -9,7 +9,7 @@ const Hero = () => {
   return (
     <div className="bg-landing pt-12 pb-2 -mt-48 z-0">
       <Container
-        id="collections"
+        id="/"
         className={"flex flex-col sm:flex-row mb-32 lg:mb-44 pb-56 lg:pb-20"}
       >
         <div className="w-full sm:w-[50%] pr-0 sm:pr-10 lg:pr-20 mt-20 mt-60 w-[60%] ml-24 lg:mt-48">
@@ -37,7 +37,6 @@ const Hero = () => {
             </Reveal>
           </div>
         </div>
-        <div className="flex-1 mt-4 lg:mt-0"></div>
       </Container>
     </div>
   );

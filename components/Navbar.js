@@ -34,7 +34,7 @@ const Navbar = () => {
 
   return (
     <div className="py-4">
-      <Container className="flex justify-between items-center ">
+      <Container className="flex justify-between items-center">
         <div className="-mt-14 -ml-20">
           <Image
             src="/logos/FlexableLogoWhite.svg"
@@ -86,7 +86,7 @@ const Navbar = () => {
 const ContentSidebar = ({ toggleMenu }) => {
   return (
     <div className="items-center flex-col sm:flex-row flex font-figtree -mt-14">
-      <Link href="/#nightlife" scroll={false}>
+      <Link href="#nightlife" scroll={false}>
         <a className="mb-3 sm:mb-0 mt-4 sm:mt-0 ml-0 sm:ml-7">Nightlife</a>
       </Link>
       <Link href="#restaurants" scroll={false}>
@@ -102,7 +102,7 @@ const ContentSidebar = ({ toggleMenu }) => {
           Events
         </a>
       </Link>
-      <Link href="#about">
+      <Link href="#about" scroll={false}>
         <a
           onClick={toggleMenu}
           className="mb-3 sm:mb-0 ml-0 lg:ml-0 mr-0 sm:mr-7"

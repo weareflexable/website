@@ -11,8 +11,9 @@ module.exports = {
     extend: {
       backgroundImage: {
         landing: "url('/club.jpeg')",
-        restaurant: "url('/restaurant.jpeg')",
+        restaurant: "url('/restaurant.jpg')",
         nightlife: "url('/nightlife.jpeg')",
+        partner: "url('/partner.jpg')",
       },
       colors: {
         primary: {

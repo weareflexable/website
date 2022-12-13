@@ -110,7 +110,7 @@ const ContentSidebar = ({ toggleMenu }) => {
           About Us
         </a>
       </Link>
-      <Link href="#partner">
+      <Link href="#partner" scroll={false}>
         <a
           onClick={toggleMenu}
           className="mb-3 sm:mb-0 ml-0 lg:ml-0 mr-0 sm:mr-7"

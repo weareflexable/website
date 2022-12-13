@@ -38,10 +38,10 @@ const Footer = () => {
               <ul className="text-black dark:text-gray-400">
                 <li className="mb-4">
                   <Link
-                    href="https://github.com/themesberg/flowbite"
+                    href="https://github.com/Weareflexable"
                     className="hover:underline "
                   >
-                    <a>Facebook</a>
+                    <a target={"_blank"}>Facebook</a>
                   </Link>
                 </li>
                 <li>
@@ -49,7 +49,7 @@ const Footer = () => {
                     href="https://discord.gg/D2eqyGZTBS"
                     className="hover:underline"
                   >
-                    <a>Discord</a>
+                    <a target={"_blank"}>Discord</a>
                   </Link>
                 </li>
               </ul>
@@ -61,20 +61,18 @@ const Footer = () => {
               <ul className="text-black dark:text-gray-400">
                 <li className="mb-4">
                   <Link
-                    href="terms/mobile_privacy_policy.docx"
-                    download
+                    href="terms/mobile_privacy_policy.html"
                     className="hover:underline"
                   >
-                    <a>Privacy Policy</a>
+                    <a target={"_blank"}>Privacy Policy</a>
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="terms/mobile_terms_of_use.docx"
-                    download
+                    href="terms/mobile_terms_of_use.html"
                     className="hover:underline"
                   >
-                    <a>Terms &amp; Conditions</a>
+                    <a target={"_blank"}>Terms &amp; Conditions</a>
                   </Link>
                 </li>
               </ul>

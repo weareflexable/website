@@ -21,6 +21,7 @@ export default function Home() {
       <Events />
       <About />
       <Partner />
+      <Contact />
       <Footer />
     </div>
   );

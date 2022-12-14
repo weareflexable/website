@@ -14,6 +14,7 @@ module.exports = {
         restaurant: "url('/restaurant.jpg')",
         nightlife: "url('/nightlife.jpeg')",
         partner: "url('/partner.jpg')",
+        eve: "url('/event.jpeg')",
       },
       colors: {
         primary: {

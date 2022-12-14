@@ -6,9 +6,9 @@ import Button from "./Button";
 
 const Nightlife = () => {
   return (
-    <div className="bg-nightlife pb-80 pt-32">
-      <Container id="nightlife" className={"mb-22 mt-20 lg:mt-24 scroll-mt-52"}>
-        <div className="text-center mb-12">
+    <div className="bg-nightlife pb-80 pt-24">
+      <Container id="nightlife" className={"mb-44 scroll-mt-36"}>
+        <div className="text-center mb-12 font-figtree">
           <h2 className="font-bold text-4xl lg:text-6xl mb-2 mt-4">
             Nightlife
           </h2>

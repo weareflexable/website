@@ -6,11 +6,8 @@ import { fadeInDownShorter, fadeInLeft, fadeInUp } from "../keyframes";
 
 const Restaurants = () => {
   return (
-    <div className="bg-restaurant pb-80 pt-32">
-      <Container
-        id="restaurants"
-        className={"mb-22 mt-20 lg:mt-24 scroll-mt-52"}
-      >
+    <div className="bg-restaurant pb-80 pt-24">
+      <Container id="restaurants" className={"mb-48 scroll-mt-28"}>
         <div className="text-center mb-12">
           <h2 className="font-bold text-4xl lg:text-6xl mb-2 mt-4">
             Restaurants

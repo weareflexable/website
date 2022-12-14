@@ -5,8 +5,8 @@ import { fadeInDownShorter, fadeInLeft, fadeInUp } from "../keyframes";
 
 const Partner = () => {
   return (
-    <div className="bg-partner pb-24 pt-48">
-      <Container id="partner" className={"mb-48 mt-20 lg:mt-24 scroll-mt-10"}>
+    <div className="bg-partner pb-24 pt-24">
+      <Container id="partner" className={"mb-48 scroll-mt-10"}>
         <div className="flex flex-col items-center ">
           <div className="text-center mb-12">
             <h2 className="font-bold text-4xl lg:text-6xl mb-2">

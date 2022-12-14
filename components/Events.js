@@ -8,7 +8,7 @@ const Events = () => {
   return (
     <div className="bg-eve pb-80 pt-24">
       <Container id="events" className={"mb-24 scroll-mt-28"}>
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 font-figtree">
           <h2 className="font-bold text-4xl lg:text-6xl mb-2 mt-4">Events</h2>
         </div>
         <div className="flex flex-col items-center lg:ml-60 w-[60%]">

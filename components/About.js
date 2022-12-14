@@ -5,9 +5,9 @@ import { fadeInDownShorter, fadeInLeft, fadeInUp } from "../keyframes";
 
 const About = () => {
   return (
-    <Container id="about" className={"mb-48 mt-20 lg:mt-24 scroll-mt-10"}>
+    <Container id="about" className={"mb-48 mt-28 lg:mt-24 scroll-mt-20"}>
       <div className="flex flex-col items-center ">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 font-figtree">
           <h2 className="font-bold text-4xl lg:text-6xl mb-2">About</h2>
         </div>
         <Reveal keyframes={fadeInDownShorter} duration={800} delay={200}>

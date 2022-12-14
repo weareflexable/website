@@ -8,7 +8,7 @@ const Partner = () => {
       <div className="text-center mb-12">
         <h2 className="font-bold text-4xl lg:text-6xl mb-2">Contact Us</h2>
       </div>
-      <div className="max-w-[1240px] m-auto pt-2 pb-5">
+      <div className="max-w-[1240px] m-auto pt-2 pb-5 font-figtree">
         <form className="max-w-[500px] m-auto pl-2">
           <div class="relative z-0 mb-6 w-full group">
             <input
@@ -97,7 +97,7 @@ const Partner = () => {
             </div>
           </div>
           <textarea
-            className="border shadow-lg p-3 w-full"
+            className="border shadow-lg p-3 w-full text-black"
             cols="30"
             rows="8"
             placeholder="Message"

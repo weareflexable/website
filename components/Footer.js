@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <div>
+    <div className="font-figtree">
       <footer className="p-4 bg-white sm:p-6 dark:bg-primary-600">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
@@ -134,7 +134,6 @@ const Footer = () => {
               className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
             >
               <a>
-                {" "}
                 <svg
                   className="w-5 h-5"
                   fill="currentColor"

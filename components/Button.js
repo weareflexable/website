@@ -6,6 +6,7 @@ const Button = ({
   variant,
   isLink,
   href,
+  type,
   onClick,
   children,
 }) => {
@@ -27,7 +28,11 @@ const Button = ({
     );
   }
   return (
-    <button onClick={onClick} className={rootClass + " " + className}>
+    <button
+      onClick={onClick}
+      className={rootClass + " " + className}
+      type={type}
+    >
       {children}
     </button>
   );

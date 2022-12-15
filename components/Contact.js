@@ -1,26 +1,58 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "./Button";
 import Container from "./Container";
+const SENDGRID_API_KEY =
+  "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";
 
-const Partner = () => {
+const Contact = () => {
+  const [first_name, setFirstName] = useState("");
+  const [last_name, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [business, setBusiness] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    const emailData = {
+      email: email,
+      first_name: first_name,
+      last_name: last_name,
+      phone: phone,
+      business: business,
+      message: `${message}`,
+    };
+
+    fetch("api/sendgrid", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(emailData),
+    });
+  };
+
   return (
     <Container id="contact" className={"mb-48 mt-20 lg:mt-24 scroll-mt-10"}>
       <div className="text-center mb-12">
         <h2 className="font-bold text-4xl lg:text-6xl mb-2">Contact Us</h2>
       </div>
       <div className="max-w-[1240px] m-auto pt-2 pb-5 font-figtree">
-        <form className="max-w-[500px] m-auto pl-2">
+        <form className="max-w-[500px] m-auto pl-2" onSubmit={handleSubmit}>
           <div class="relative z-0 mb-6 w-full group">
             <input
               type="email"
-              name="floating_email"
-              id="floating_email"
+              name="email"
+              id="email"
+              value={email}
+              onChange={(event) => setEmail(event.target.value)}
               class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
               placeholder=" "
               required=""
             />
             <label
-              for="floating_email"
+              for="email"
               class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
             >
               Email address
@@ -31,14 +63,15 @@ const Partner = () => {
             <div class="relative z-0 mb-6 w-full group">
               <input
                 type="text"
-                name="floating_first_name"
-                id="floating_first_name"
+                id="first_name"
+                value={first_name}
+                onChange={(event) => setFirstName(event.target.value)}
                 class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                 placeholder=" "
                 required=""
               />
               <label
-                for="floating_first_name"
+                for="first_name"
                 class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
               >
                 First name
@@ -47,14 +80,15 @@ const Partner = () => {
             <div class="relative z-0 mb-6 w-full group">
               <input
                 type="text"
-                name="floating_last_name"
-                id="floating_last_name"
+                id="last_name"
+                value={last_name}
+                onChange={(event) => setLastName(event.target.value)}
                 class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                 placeholder=" "
                 required=""
               />
               <label
-                for="floating_last_name"
+                for="last_name"
                 class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
               >
                 Last name
@@ -66,14 +100,15 @@ const Partner = () => {
               <input
                 type="tel"
                 pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                name="floating_phone"
-                id="floating_phone"
+                name="phone"
+                id="phone"
+                onChange={(event) => setPhone(event.target.value)}
                 class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                 placeholder=" "
                 required=""
               />
               <label
-                for="floating_phone"
+                for="phone"
                 class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
               >
                 Phone number
@@ -82,14 +117,15 @@ const Partner = () => {
             <div class="relative z-0 mb-6 w-full group">
               <input
                 type="text"
-                name="floating_company"
-                id="floating_company"
+                name="company"
+                id="company"
+                onChange={(event) => setBusiness(event.target.value)}
                 class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                 placeholder=" "
                 required=""
               />
               <label
-                for="floating_company"
+                for="company"
                 class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
               >
                 Business Name
@@ -97,6 +133,9 @@ const Partner = () => {
             </div>
           </div>
           <textarea
+            id="message"
+            value={message}
+            onChange={(event) => setMessage(event.target.value)}
             className="border shadow-lg p-3 w-full text-black"
             cols="30"
             rows="8"
@@ -104,10 +143,9 @@ const Partner = () => {
           ></textarea>
           <div className="flex justify-center mt-5">
             <Button
-              isLink
-              href={"#"}
               className={"mr-3 text-black"}
               variant={"primary"}
+              type={"submit"}
             >
               Submit
             </Button>
@@ -132,4 +170,4 @@ const Partner = () => {
   );
 };
 
-export default Partner;
+export default Contact;

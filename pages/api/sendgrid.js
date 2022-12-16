@@ -1,7 +1,7 @@
 import sendgrid from "@sendgrid/mail";
 
 sendgrid.setApiKey(
-  "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"
+  "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"
 );
 
 async function sendEmail(req, res) {
@@ -9,8 +9,8 @@ async function sendEmail(req, res) {
     // console.log("REQ.BODY", req.body);
     await sendgrid.send({
       to: `${req.body.email}`, // Your email where you'll receive emails
-      from: `ryan@flexabledats.com`,
-      cc: "ryan@flexabledats.com", // your website email address here
+      from: `sailesh.e123@gmail.com`,
+      // cc: "ryan@flexabledats.com", // your website email address here
       subject: `New Flexable Contact Form Message`,
       html: `<!doctype html>
 <html>
@@ -356,7 +356,7 @@ async function sendEmail(req, res) {
     </style>
   </head>
   <body>
-    <span class="preheader"></span>
+    <span class="preheader">New message from Flexable Contact - </span>
     <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="body">
       <tr>
         <td>&nbsp;</td>

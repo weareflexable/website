@@ -38,8 +38,13 @@ const Contact = () => {
             "Content-Type": "application/json",
           },
           body: JSON.stringify(emailData),
+        }).then((response) => {
+          if (!response.ok) {
+            toast(`Email could not be sent (error: ${response.status})`);
+          } else {
+            toast("Contact submission sent");
+          }
         });
-        toast("Contact submission sent");
       } catch (error) {
         toast("Error submitting form");
       }

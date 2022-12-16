@@ -13,7 +13,7 @@ const Events = () => {
         </div>
         <div className="flex flex-col items-center lg:ml-60 w-[60%]">
           <Reveal keyframes={fadeInDownShorter} duration={800} delay={200}>
-            <h1 className="text-2xl lg:text-4xl font-figtree font-bold mb-5 opacity-70 mb-8">
+            <h1 className="text-2xl lg:text-4xl font-figtree font-bold mb-5 opacity-80 mb-8">
               Avoid being taken by scalpers and (shudder) fake tickets when
               events are ticketed with Flexable. Our blockchain booking system
               makes sure that both the event holder and the attendee have more

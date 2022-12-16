@@ -16,6 +16,14 @@ module.exports = {
         partner: "url('/partner.jpg')",
         eve: "url('/event.jpeg')",
       },
+      backgroundPosition: {
+        "center-top": "center top",
+        "center-bottom": "center bottom",
+        "right-center": "right center",
+        "right-bottom": "right bottom",
+        "left-center": "left center",
+        "left-top": "left top",
+      },
       colors: {
         primary: {
           300: "#494753",

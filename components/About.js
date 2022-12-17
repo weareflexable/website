@@ -15,7 +15,9 @@ const About = () => {
             <h1 className="text-2xl lg:text-4xl font-figtree font-bold opacity-50">
               Flexable partners with popular venues to get you in: with line
               skips at your favorite bar, with same-day bookings at your
-              favorite restaurants, and even party passes at Greek houses.
+              favorite restaurants, and even party passes at Greek houses. Our
+              flexible platform is designed to handle any use case it is given -
+              its in the name.
             </h1>
           </div>
         </Reveal>

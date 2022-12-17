@@ -10,10 +10,11 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        landing: "url('/club.jpeg')",
+        partner: "url('/club.jpeg')",
+        partner_mobile: "url('/club-mobile.png')",
         restaurant: "url('/restaurant.jpg')",
         nightlife: "url('/nightlife.jpeg')",
-        partner: "url('/partner.jpg')",
+        landing: "url('/landing.jpeg')",
         eve: "url('/event.jpeg')",
       },
       backgroundPosition: {
@@ -34,6 +35,17 @@ module.exports = {
         accent: {
           100: "#17FFA6",
           200: "#29B27E",
+        },
+        lightgrey: {
+          100: "#FAFAFB",
+          200: "#F5F6F7",
+          300: "#EEEFF2",
+          400: "#E2E4E8",
+          500: "#CACDD5",
+          600: "#B2B7C2",
+          700: "#A4A9B6",
+          800: "#959CAB",
+          900: "#8C93A3",
         },
       },
     },

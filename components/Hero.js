@@ -7,20 +7,21 @@ import { fadeInDownShorter, fadeInLeft, fadeInUp } from "../keyframes";
 
 const Hero = () => {
   return (
-    <div className="bg-landing pt-12 pb-2 -mt-48 z-0">
+    <div className="bg-landing  pt-12 pb-2 -mt-48 z-0">
       <Container
         id="/"
         className={"flex flex-col sm:flex-row mb-32 lg:mb-44 pb-56 lg:pb-20"}
       >
-        <div className="w-full sm:w-[50%] pr-0 sm:pr-10 lg:pr-20 mt-20 mt-60 w-[60%] ml-24 lg:mt-48">
+        <div className="lg:w-[60%] w-[50%] pr-0 sm:pr-10 lg:pr-20 mt-20 mt-60 w-[60%] ml-24 lg:mt-48">
           <Reveal keyframes={fadeInLeft} duration={800} delay={200}>
             <h1 className="text-5xl lg:text-7xl font-figtree font-bold mb-5">
-              Explore the world - it&apos;s time to enjoy with Flexable !
+              Get exclusive access to popular venues with Flexable.
             </h1>
           </Reveal>
           <Reveal keyframes={fadeInDownShorter} duration={1000} delay={800}>
             <p className="mb-8 opacity-50 font-figtree">
-              Discover the best places near your locality
+              Discover line skips, last minute reservations, party passes and
+              more near you!
             </p>
           </Reveal>
 

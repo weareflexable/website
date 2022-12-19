@@ -87,7 +87,6 @@ const Contact = () => {
               Email address
             </label>
           </div>
-
           <div className="grid md:grid-cols-2 md:gap-6">
             <div className="relative z-0 mb-6 w-full group">
               <input
@@ -127,8 +126,7 @@ const Contact = () => {
           <div className="grid md:grid-cols-2 md:gap-6">
             <div className="relative z-0 mb-6 w-full group">
               <input
-                type="tel"
-                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                type="text"
                 name="phone"
                 id="phone"
                 onChange={(event) => setPhone(event.target.value)}
@@ -173,7 +171,7 @@ const Contact = () => {
           <div className="flex justify-center mt-4">
             <ReCAPTCHA
               ref={reCaptchaRef}
-              sitekey="6LcwjoAjAAAAAAt5xdaZvPRNPP5ipBRQp0Srt90B"
+              sitekey="6LfUwIgjAAAAAHvqle9afBnsSglDDHwGiSPYcY6F"
               onChange={handleChange}
             />
           </div>

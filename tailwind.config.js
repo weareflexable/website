@@ -12,7 +12,7 @@ module.exports = {
       backgroundImage: {
         partner: "url('/club.jpeg')",
         partner_mobile: "url('/club-mobile.png')",
-        restaurant: "url('/restaurant.jpg')",
+        restaurant: "url('/restaurant-gradient.jpeg')",
         nightlife: "url('/nightlife.jpeg')",
         landing: "url('/landing.jpeg')",
         eve: "url('/event.jpeg')",

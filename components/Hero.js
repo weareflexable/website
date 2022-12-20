@@ -7,7 +7,7 @@ import { fadeInDownShorter, fadeInLeft, fadeInUp } from "../keyframes";
 
 const Hero = () => {
   return (
-    <div className="bg-landing  pt-12 pb-2 -mt-48 z-0">
+    <div className="bg-landing md:bg-[left_-20rem_top_-5rem] lg:bg-left-top bg-[left_-45rem_top_0rem] pt-12 pb-2 -mt-48 z-0">
       <Container
         id="/"
         className={"flex flex-col sm:flex-row mb-32 lg:mb-44 pb-56 lg:pb-20"}

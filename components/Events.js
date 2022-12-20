@@ -6,12 +6,12 @@ import { fadeInDownShorter, fadeInLeft, fadeInUp } from "../keyframes";
 
 const Events = () => {
   return (
-    <div className="bg-eve pb-80 pt-24">
+    <div className="bg-eve bg-[right_-25rem_bottom_-14rem] lg:bg-[right_-15rem_center] lg:pb-80 lg:pt-24 pt-12 pb-2">
       <Container id="events" className={"mb-24 scroll-mt-28"}>
         <div className="text-center mb-12 font-figtree">
           <h2 className="font-bold text-4xl lg:text-6xl mb-2 mt-4">Events</h2>
         </div>
-        <div className="flex flex-col items-center lg:ml-60 w-[60%]">
+        <div className="flex flex-col items-center lg:ml-60 w-[60%] ml-20 md:ml-40">
           <Reveal keyframes={fadeInDownShorter} duration={800} delay={200}>
             <h1 className="text-2xl lg:text-4xl font-figtree font-bold mb-5 opacity-80 mb-8">
               Avoid being taken by scalpers and (shudder) fake tickets when

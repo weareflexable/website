@@ -63,7 +63,7 @@ const Contact = () => {
   };
 
   return (
-    <Container id="contact" className={"mb-20 mt-4 lg:mt-24 scroll-mt-10"}>
+    <Container id="contact" className={"mb-20 mt-12 lg:mt-24 scroll-mt-10"}>
       <div className="text-center mb-12">
         <h2 className="font-bold text-4xl lg:text-6xl mb-2">Contact Us</h2>
       </div>

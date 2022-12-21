@@ -10,8 +10,8 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        partner: "url('/club.jpeg')",
-        partner_mobile: "url('/club-mobile.png')",
+        partner: "url('/partner.jpeg')",
+        partner_mobile: "url('/partner-mobile.jpeg')",
         restaurant: "url('/restaurant.jpg')",
         nightlife: "url('/nightlife.jpeg')",
         landing: "url('/landing.jpeg')",

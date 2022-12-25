@@ -17,7 +17,7 @@ const Restaurants = () => {
           </div>
           <div className="flex flex-col items-center lg:ml-60 w-[60%] ml-20 md:ml-40">
             <Reveal keyframes={fadeInDownShorter} duration={800} delay={200}>
-              <h1 className="text-2xl lg:text-4xl font-figtree font-bold mb-5 opacity-50 mb-8">
+              <h1 className="text-2xl lg:text-4xl font-figtree font-bold opacity-50 mb-8">
                 So you don&apos;t have to book 4 weeks in advance. Secure
                 same-day reservations at the hottest restaurants. Click below to
                 find participating venues in your area.

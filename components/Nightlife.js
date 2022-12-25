@@ -15,7 +15,7 @@ const Nightlife = () => {
         </div>
         <div className="flex flex-col items-center lg:ml-60 w-[60%] ml-20 md:ml-40">
           <Reveal keyframes={fadeInDownShorter} duration={800} delay={200}>
-            <h1 className="text-2xl lg:text-4xl font-figtree font-bold mb-5 md:opacity-80 lg:opacity-50 opacity-70 mb-8">
+            <h1 className="text-2xl lg:text-4xl font-figtree font-bold md:opacity-80 lg:opacity-50 opacity-70 mb-8">
               Who doesn&apos;t want exclusive access? Party like it&apos;s 1999
               with line skips, drink specials, event tickets, and more. Click
               below to find participating venues in your area.

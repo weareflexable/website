@@ -34,19 +34,27 @@ const Navbar = () => {
 
   return (
     <div className="py-4">
-      <Container className="flex justify-between items-center">
-        <div className="-mt-14 -ml-20">
+      <div className="flex justify-between items-center">
+        <div className="mb-12 lg:block hidden ml-12  ">
           <Image
-            src="/logos/FlexableLogoWhite.svg"
+            src="/logos/logo_60x60.png"
             alt="flexable-logo"
-            width={200}
-            height={200}
+            width={100}
+            height={100}
           />
         </div>
-        <div className="hidden sm:block">
+        <div className="md:mb-12 mb-20 lg:hidden ml-8 block">
+          <Image
+            src="/logos/logo_60x60.png"
+            alt="flexable-logo"
+            width={75}
+            height={75}
+          />
+        </div>
+        <div className="lg:block hidden">
           <ContentSidebar toggleMenu={toggleMenu} />
         </div>
-        <div className="block sm:hidden cursor-pointer mb-20 z-50">
+        <div className="block lg:hidden cursor-pointer mb-20 z-50 mr-8">
           <Image
             onClick={toggleMenu}
             src="/menu.svg"
@@ -55,7 +63,7 @@ const Navbar = () => {
             height={30}
           />
         </div>
-        {menu && width < 640 && (
+        {menu && width < 1024 && (
           <Fade
             duration={300}
             delay={100}
@@ -67,7 +75,7 @@ const Navbar = () => {
           </Fade>
         )}
         {/* <Logo /> */}
-        {menu && width < 640 && (
+        {menu && width < 1024 && (
           <Fade
             duration={300}
             delay={100}
@@ -78,26 +86,26 @@ const Navbar = () => {
             </div>
           </Fade>
         )}
-      </Container>
+      </div>
     </div>
   );
 };
 
 const ContentSidebar = ({ toggleMenu }) => {
   return (
-    <div className="items-center flex-col sm:flex-row flex font-figtree -mt-14">
+    <div className="items-center flex-col lg:flex-row flex font-figtree -mt-14">
       <Link href="#nightlife" scroll={false}>
-        <a className="mb-3 sm:mb-0 mt-4 sm:mt-0 ml-0 sm:ml-7">Nightlife</a>
+        <a className="mb-3 lg:mb-0 mt-4 lg:mt-0 ml-0 lg:ml-7">Nightlife</a>
       </Link>
       <Link href="#restaurants" scroll={false}>
-        <a onClick={toggleMenu} className="mb-3 sm:mb-0 ml-0 sm:ml-7">
+        <a onClick={toggleMenu} className="mb-3 lg:mb-0 ml-0 lg:ml-7">
           Restaurants
         </a>
       </Link>
       <Link href="#events" scroll={false}>
         <a
           onClick={toggleMenu}
-          className="mb-3 sm:mb-0 ml-0 sm:ml-7 mr-0 sm:mr-7"
+          className="mb-3 lg:mb-0 ml-0 lg:ml-7 mr-0 lg:mr-7"
         >
           Events
         </a>
@@ -105,7 +113,7 @@ const ContentSidebar = ({ toggleMenu }) => {
       <Link href="#about" scroll={false}>
         <a
           onClick={toggleMenu}
-          className="mb-3 sm:mb-0 ml-0 lg:ml-0 mr-0 sm:mr-7"
+          className="mb-3 lg:mb-0 ml-0 lg:ml-0 mr-0 lg:mr-7"
         >
           About Us
         </a>
@@ -113,13 +121,13 @@ const ContentSidebar = ({ toggleMenu }) => {
       <Link href="#partner" scroll={false}>
         <a
           onClick={toggleMenu}
-          className="mb-3 sm:mb-0 ml-0 lg:ml-0 mr-0 sm:mr-7"
+          className="mb-3 lg:mb-0 ml-0 lg:ml-0 mr-0 lg:mr-7"
         >
           Partner With Us
         </a>
       </Link>
       <Button
-        className="mb-3 sm:mb-0 ml-0 lg:ml-0 mr-0 sm:mr-7 text-black"
+        className="mb-3 lg:mb-0 ml-0 lg:ml-0 mr-0 lg:mr-7 text-black"
         variant={"primary"}
         isLink
         href={"https://marketplace.flexabledats.com/"}
@@ -127,7 +135,7 @@ const ContentSidebar = ({ toggleMenu }) => {
         Sign In
       </Button>
       <Button
-        className="mb-3 sm:mb-0 ml-0 lg:ml-0 mr-0 sm:mr-7 text-black"
+        className="mb-3 lg:mb-0 ml-0 lg:ml-0 mr-0 lg:mr-7 text-black"
         variant={"primary"}
         isLink
         href={"https://marketplace.flexabledats.com/"}

@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -9,7 +10,16 @@ const Footer = () => {
           <div className="mb-6 md:mb-0">
             <Link href="/" className="flex items-center ">
               <span className="self-center italic cursor-pointer text-4xl ml-10 font-semibold whitespace-nowrap dark:text-white">
-                <a>Flexable</a>
+                <a>
+                  <div className="-mt-8">
+                    <Image
+                      src="/logos/logo_60x60.png"
+                      alt="flexable-logo"
+                      width={100}
+                      height={100}
+                    />
+                  </div>
+                </a>
               </span>
             </Link>
           </div>

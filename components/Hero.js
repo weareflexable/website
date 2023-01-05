@@ -12,7 +12,7 @@ const Hero = () => {
         id="/"
         className={"flex flex-col sm:flex-row mb-32 lg:mb-44 pb-56 lg:pb-20"}
       >
-        <div className="lg:w-[60%] w-[60%] pr-0 sm:pr-10 lg:pr-20 mt-40 lg:ml-24 ml-20 lg:mt-48">
+        <div className="lg:w-[60%] w-[60%] pr-0 sm:pr-10 lg:pr-20 mt-40 lg:ml-24 ml-16 lg:mt-48">
           <Reveal keyframes={fadeInLeft} duration={800} delay={200}>
             <h1 className="text-5xl lg:text-7xl font-figtree font-bold mb-5">
               Get exclusive access to popular venues with Flexable.

@@ -11,12 +11,12 @@ const Footer = () => {
             <Link href="/" className="flex items-center ">
               <span className="self-center italic cursor-pointer text-4xl ml-10 font-semibold whitespace-nowrap dark:text-white">
                 <a>
-                  <div className="-mt-8">
+                  <div className="-mt-16 -mb-12 -ml-10 lg:-mt-20 md:-mt-20">
                     <Image
-                      src="/logos/logo_60x60.png"
+                      src="/logos/logo.svg"
                       alt="flexable-logo"
-                      width={100}
-                      height={100}
+                      width={150}
+                      height={150}
                     />
                   </div>
                 </a>

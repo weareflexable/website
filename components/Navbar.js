@@ -33,28 +33,28 @@ const Navbar = () => {
   };
 
   return (
-    <div className="py-4">
+    <div className="py-4  lg:-mt-24 -mt-12">
       <div className="flex justify-between items-center">
-        <div className="mb-12 lg:block hidden ml-12  ">
+        <div className="lg:block hidden mt-12 -ml-2">
           <Image
-            src="/logos/logo_60x60.png"
+            src="/logos/logo.svg"
             alt="flexable-logo"
-            width={100}
-            height={100}
+            width={200}
+            height={200}
           />
         </div>
-        <div className="md:mb-12 mb-20 lg:hidden ml-8 block">
+        <div className="-ml-4 lg:hidden mt-2 block z-50">
           <Image
-            src="/logos/logo_60x60.png"
+            src="/logos/logo.svg"
             alt="flexable-logo"
-            width={75}
-            height={75}
+            width={150}
+            height={150}
           />
         </div>
         <div className="lg:block hidden">
           <ContentSidebar toggleMenu={toggleMenu} />
         </div>
-        <div className="block lg:hidden cursor-pointer mb-20 z-50 mr-8">
+        <div className="block lg:hidden lg:mb-0 mb-4 cursor-pointer z-50 mr-8">
           <Image
             onClick={toggleMenu}
             src="/menu.svg"
@@ -93,7 +93,7 @@ const Navbar = () => {
 
 const ContentSidebar = ({ toggleMenu }) => {
   return (
-    <div className="items-center flex-col lg:flex-row flex font-figtree -mt-14">
+    <div className="items-center flex-col lg:flex-row flex font-figtree">
       <Link href="#nightlife" scroll={false}>
         <a className="mb-3 lg:mb-0 mt-4 lg:mt-0 ml-0 lg:ml-7">Nightlife</a>
       </Link>

@@ -10,12 +10,12 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        partner: "url('/partner.jpeg')",
-        partner_mobile: "url('/partner-mobile.jpeg')",
-        restaurant: "url('/restaurant.jpg')",
-        nightlife: "url('/nightlife.jpeg')",
-        landing: "url('/landing.jpeg')",
-        eve: "url('/event.jpeg')",
+        partner: "url('/images/partner.jpeg')",
+        partner_mobile: "url('/images/partner-mobile.jpeg')",
+        restaurant: "url('/images/restaurant.jpg')",
+        nightlife: "url('/images/nightlife.jpeg')",
+        landing: "url('/images/landing.jpeg')",
+        eve: "url('/images/event.jpeg')",
       },
       backgroundPosition: {
         "center-top": "center top",
@@ -25,7 +25,7 @@ module.exports = {
         "left-center": "left center",
         "left-top": "left top",
       },
-      colors: {
+      colors: { 
         primary: {
           300: "#494753",
           400: "#373637",

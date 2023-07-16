@@ -29,13 +29,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  basePath: '/launchpad',
+  basePath: "",
 
   staticPageGenerationTimeout:  100,
  output:"standalone",
  images:{
   loader:'akamai',
-  path:"",
+  path:"/public/images",
  },
 }
 module.exports = nextConfig

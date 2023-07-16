@@ -2,6 +2,7 @@ import React from "react";
 import Container from "./Container";
 import { Reveal } from "react-awesome-reveal";
 import { fadeInDownShorter, fadeInLeft, fadeInUp } from "../keyframes";
+import Button from "./Button";
 
 const Partner = () => {
   return (
@@ -52,6 +53,14 @@ const Partner = () => {
                   now. I love the utility!” - Someone who previously waited in
                   lines
                 </h1>
+                <Button
+                isLink
+                href={"https://portal.flexabledats.com/"}
+                className={"mr-3 text-black"}
+                variant={"primary"}
+              >
+                Get Started
+              </Button>
               </div>
             </Reveal>
           </div>

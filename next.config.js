@@ -35,7 +35,7 @@ const nextConfig = {
  output:"standalone",
  images:{
   loader:'akamai',
-  path:"/public/images",
+  path:"/images",
  },
 }
 module.exports = nextConfig

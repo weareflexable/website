@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps }) {
           name="description"
           content="Why wait in the line when you could just... not."
         />
-        <link rel="icon" href="logos/logo_60x60.png" />
+        <link rel="icon" href="/logos/logo.svg" /> 
       </Head>
       <Component {...pageProps} />
     </>

@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { Button } from "../ui/button";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -37,15 +38,22 @@ const Hero = () => {
         <div className="flex mx-auto w-full max-w-[1000px] justify-center items-center md:mt-20 2xl:ml-32 text-center">
           <div className="md:w-1/2">
             <div className="mb-8">
-              <Button variant="secondary" size="lg" className="text-lg">
-                I&apos;m a Business
-              </Button>
+              <Link href="https://portal.flexabledats.com/" target="_blank">
+                <Button variant="secondary" size="lg" className="text-lg sm:w-48">
+                  I&apos;m a Business
+                </Button>
+              </Link>
             </div>
 
             <div className="">
-              <Button variant="secondary" size="lg" className="text-lg">
-                I&apos;m a Consumer
-              </Button>
+              <Link
+                href="https://marketplace.flexabledats.com/"
+                target="_blank"
+              >
+                <Button variant="secondary" size="lg" className="text-lg w-48">
+                  I&apos;m a Consumer
+                </Button>
+              </Link>
             </div>
           </div>
           <div className="hidden sm:block text-left">

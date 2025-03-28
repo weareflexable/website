@@ -26,11 +26,11 @@ const Footer = () => {
           priority
         />
 
-        <div className="absolute inset-0 bg-gradient-to-b from-background/70 to-background/70"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-background/30 to-background/30"></div>
       </div>
 
-      <div className="relative z-10 container mx-auto px-4 flex flex-col justify-center">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  gap-8 max-w-[1200px] mx-auto">
+      <div className="relative z-10 container mx-auto px-4 flex flex-col justify-center lg:pt-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  gap-8 max-w-[1200px] mx-auto pb-40">
           {accessContent.map((section, index) => (
             <div
               key={index}

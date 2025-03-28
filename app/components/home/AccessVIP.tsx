@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { Button } from "../ui/button";
+import Link from "next/link";
 
 const accessContent = [
   {
@@ -39,7 +40,7 @@ const AccessVIP = () => {
       <div className="relative z-10 container mx-auto px-4 h-screen flex flex-col justify-center">
         <div className="sm:mb-12">
           <h1 className="text-3xl md:text-5xl font-normal text-white sm:mb-6 leading-14 text-center">
-            Skip the Wait. Access VIP. Experience More.{" "}
+            Monetize Access. Unlock New Opportunities
           </h1>
         </div>
         <div className="hidden sm:grid grid-cols-1 md:grid-cols-2 gap-8 max-w-[1200px] mx-auto">
@@ -69,9 +70,11 @@ const AccessVIP = () => {
           <h1>Just show your QR code at the entrance!</h1>
         </div>
         <div className="text-center my-10">
-          <Button variant="primary" size="lg">
-            Sign Up
-          </Button>
+          <Link href="https://portal.flexabledats.com/" target="_blank">
+            <Button variant="primary" size="lg">
+              Sign Up
+            </Button>
+          </Link>
         </div>
       </div>
     </div>

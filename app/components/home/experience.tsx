@@ -3,6 +3,7 @@ import { Card } from "@/app/components/ui/card";
 import Image from "next/image";
 import { businessData } from "@/app/constants/text";
 import { Button } from "../ui/button";
+import Link from "next/link";
 
 const cardData = [
   {
@@ -10,24 +11,35 @@ const cardData = [
     iconAlt: "Card Icon",
     title: "Easy",
     titleLine2: "Payments",
+    hoverTitle: "Easy Payments",
+    hoverDescription:
+      "Customers buy digital access tokens (DATs) using credit/debit cards.",
   },
   {
     icon: "/home/lock.svg",
     iconAlt: "Lock Icon",
     title: "Fraud-Proof",
     titleLine2: "Security",
+    hoverTitle: "Fraud-Proof Security",
+    hoverDescription:
+      "Blockchain-backed tickets prevent counterfeiting and resale abuse.",
   },
   {
     icon: "/home/dollar.svg",
     iconAlt: "Dollar Icon",
     title: "Easy",
     titleLine2: "Payout",
+    hoverTitle: "Easy Payout",
+    hoverDescription:
+      "Stripe integration ensures easy payouts and automated access control.",
   },
   {
     icon: "/home/revenue.svg",
     iconAlt: "Revenue Icon",
     title: "New Revenue,",
     titleLine2: "No Changes",
+    hoverTitle: "New Revenue, No Changes",
+    hoverDescription: "Monetize access effortlessly, with no extra hassle.",
   },
 ];
 
@@ -46,8 +58,11 @@ const Experience = () => {
           <span className="text-2xl sm:text-3xl inline-block">
             Blockchain security
           </span>{" "}
-          with <span className="text-2xl sm:text-3xl inline-block">Web2 simplicity</span>.
-          Businesses tokenize access using Digital Access Tokens (DATs) while
+          with{" "}
+          <span className="text-2xl sm:text-3xl inline-block">
+            Web2 simplicity
+          </span>
+          . Businesses tokenize access using Digital Access Tokens (DATs) while
           customers pay with credit cards—secure and simple.
         </p>
         <div className="container mx-auto px-4 py-10">
@@ -66,6 +81,8 @@ const Experience = () => {
                 }
                 title={card.title}
                 titleLine2={card.titleLine2}
+                hoverTitle={card.hoverTitle}
+                hoverDescription={card.hoverDescription}
                 variant="hover"
               />
             ))}
@@ -118,12 +135,16 @@ const Experience = () => {
         </div>
       </div>
       <div className="text-center md:space-x-14">
-        <Button variant="primary" size="lg">
-          Business Sign Up
-        </Button>{" "}
-        <Button className="mt-6" variant="primary" size="lg">
-          Consumer Sign Up{" "}
-        </Button>
+        <Link href="https://portal.flexabledats.com/" target="_blank">
+          <Button variant="primary" size="lg" className="w-56">
+            Business Sign Up
+          </Button>
+        </Link>
+        <Link href="https://marketplace.flexabledats.com/" target="_blank">
+          <Button className="mt-6 w-56" variant="primary" size="lg">
+            Consumer Sign Up
+          </Button>
+        </Link>
       </div>
     </div>
   );

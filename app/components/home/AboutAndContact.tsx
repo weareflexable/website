@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { Button } from "../ui/button";
+import Link from "next/link";
 
 const AboutAndContact = () => {
   return (
@@ -20,15 +21,18 @@ const AboutAndContact = () => {
 
         <div className="md:flex items-center justify-center my-20 md:space-x-6 text-center">
           <div className="">
-            {" "}
-            <Button variant="secondary" size="lg">
-              Business Sign Up
-            </Button>
+            <Link href="https://portal.flexabledats.com/" target="_blank">
+              <Button variant="secondary" size="lg">
+                Business Sign Up
+              </Button>
+            </Link>
           </div>
           <div className="mt-8 sm:mt-0">
-            <Button variant="secondary" size="lg">
-              Consumer Sign Up
-            </Button>
+            <Link href="https://marketplace.flexabledats.com/" target="_blank">
+              <Button variant="secondary" size="lg">
+                Consumer Sign Up
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
@@ -47,15 +51,15 @@ const AboutAndContact = () => {
           </div>
 
           <div className="relative z-10 h-full flex flex-col justify-between px-8 md:px-16 py-12 md:p-20">
-            <div className="flex-1 flex items- justify-start">
-              <h2 className="text-2xl md:text-3xl font-normal text-white leading-10 text-left">
+            <div className="flex-1 flex items-center justify-center">
+              <h2 className="text-2xl md:text-3xl font-normal text-white leading-10 text-center">
                 &ldquo;Flexable has created passive income for my venue where I
                 didn&apos;t know it existed before&rdquo;
               </h2>
             </div>
-            <div className="text-white text-xl md:text-3xl text-left">
+            {/* <div className="text-white text-xl md:text-3xl text-left">
               <p>-Owner of XXX!</p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
@@ -126,9 +130,11 @@ const AboutAndContact = () => {
             ></textarea>
           </div>
 
-          <Button type="submit" variant="primary" className="">
-            Send Message
-          </Button>
+          <div className="flex justify-center">
+            <Button type="submit" variant="primary">
+              Send Message
+            </Button>
+          </div>
         </form>
       </div>
     </div>

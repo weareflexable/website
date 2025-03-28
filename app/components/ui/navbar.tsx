@@ -7,6 +7,7 @@ import { Button } from "./button";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,6 +18,10 @@ const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
 
   return (
     <nav
@@ -57,19 +62,29 @@ const Navbar = () => {
             >
               Services
             </Link> */}
-            <Button variant="primary" size="lg">
-              Business Portal
-            </Button>
-            <Button variant="secondary" size="lg">
-              Marketplace
-            </Button>
+            <Link href="https://portal.flexabledats.com/" target="_blank">
+              <Button variant="primary" size="lg">
+                Business Portal
+              </Button>
+            </Link>
+
+            <Link href="https://marketplace.flexabledats.com/" target="_blank">
+              <Button variant="secondary" size="lg">
+                Marketplace
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
-          <Button variant="ghost" size="icon" className="md:hidden">
+          <Button
+            variant="ghost"
+            size="icon"
+            className="md:hidden"
+            onClick={toggleMobileMenu}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
+              className="h-6 w-6 text-accent"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -78,15 +93,55 @@ const Navbar = () => {
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth={2}
-                d="M4 6h16M4 12h16M4 18h16"
+                d={
+                  isMobileMenuOpen
+                    ? "M6 18L18 6M6 6l12 12" // X icon when menu is open
+                    : "M4 6h16M4 12h16M4 18h16" // Hamburger icon when menu is closed
+                }
               />
             </svg>
           </Button>
         </div>
       </div>
+
+      {/* Mobile Menu */}
+      <div
+        className={`md:hidden bg-secondary transition-all duration-300 overflow-hidden ${
+          isMobileMenuOpen ? "max-h-[300px] opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="px-20 py-6 space-y-6">
+          <div className="flex flex-col items-center space-y-6">
+            <Link
+              href="https://portal.flexabledats.com/"
+              target="_blank"
+              className="w-full"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              <Button variant="primary" size="lg" className="w-48">
+                Business Portal
+              </Button>
+            </Link>
+
+            <Link
+              href="https://marketplace.flexabledats.com/"
+              target="_blank"
+              className="w-full"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              <Button variant="secondary" size="lg" className="w-48">
+                Marketplace
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </div>
+
       <hr
         className={`${
-          isScrolled ? "border-none" : "border-t-[0.5px] border-accent"
+          isScrolled
+            ? "border-none"
+            : "border-t-[0.2px] opacity-30 border-accent"
         } `}
       />
     </nav>

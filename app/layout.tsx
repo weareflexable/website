@@ -19,7 +19,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Flexable | Digital Access Tokens",
+  title: "Flexable",
   description:
     "Flexable unlocks the future of venue access with Digital Access Tokens (DATs), enabling venues to maximize revenue while providing consumers a seamless way to discover, purchase, and redeem exclusive experiences.",
   generator: "Next.js",

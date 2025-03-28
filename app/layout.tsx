@@ -19,7 +19,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Flexable",
+  title: "Flexable | Digital Access Tokens",
   description:
     "Flexable unlocks the future of venue access with Digital Access Tokens (DATs), enabling venues to maximize revenue while providing consumers a seamless way to discover, purchase, and redeem exclusive experiences.",
   generator: "Next.js",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://flexabledats.com"),
+  metadataBase: new URL("https://flexable.vercel.app"),
   alternates: {
     canonical: "/",
   },
@@ -53,10 +53,22 @@ export const metadata: Metadata = {
     siteName: "Flexable",
     images: [
       {
-        url: "/Flexable_meta-image.png",
+        url: "https://flexable.vercel.app/Flexable_meta-image.png",
         width: 1200,
         height: 630,
         alt: "Flexable - Digital Access Tokens",
+      },
+      {
+        url: "https://flexable.vercel.app/Flexable_og_alt.png",
+        width: 1200,
+        height: 630,
+        alt: "Flexable - Skip the Line",
+      },
+      {
+        url: "https://flexable.vercel.app/Flexable_og_square.png",
+        width: 800,
+        height: 800,
+        alt: "Flexable Logo",
       },
     ],
     locale: "en_US",
@@ -67,7 +79,10 @@ export const metadata: Metadata = {
     title: "Flexable | Digital Access Tokens",
     description:
       "Skip the line with Digital Access Tokens for exclusive venue experiences.",
-    images: ["/twitter-image.jpg"],
+    images: [
+      "https://flexable.vercel.app/Flexable_meta-image.png",
+      "https://flexable.vercel.app/Flexable_twitter_card.png",
+    ],
     creator: "@flexabledats",
   },
   icons: {

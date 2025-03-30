@@ -108,11 +108,11 @@ const AboutAndContact = () => {
                   &ldquo;{testimonial.quote}&rdquo;
                 </h2>
               </div>
-              {testimonial.author && (
+              {/* {testimonial.author && (
                 <div className="text-white text-xl md:text-3xl text-right mt-6">
                   <p>- {testimonial.author}</p>
                 </div>
-              )}
+              )} */}
             </div>
           </div>
         ))}

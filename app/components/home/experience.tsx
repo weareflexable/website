@@ -1,9 +1,15 @@
-import React from "react";
+"use client";
+import React, { useCallback } from "react";
 import { Card } from "@/app/components/ui/card";
 import Image from "next/image";
 import { businessData } from "@/app/constants/text";
 import { Button } from "../ui/button";
 import Link from "next/link";
+import {
+  useCardAnimations,
+  useLeftRightAnimations,
+  useTiltOnHover,
+} from "@/app/utils/animations/useAnimations";
 
 const cardData = [
   {
@@ -44,6 +50,23 @@ const cardData = [
 ];
 
 const Experience = () => {
+  const cardsContainerRef = useCardAnimations();
+  const businessSectionsRef = useLeftRightAnimations();
+  const tiltRef = useTiltOnHover(".tilt-element", 7);
+
+  const combinedRef = useCallback(
+    (node: HTMLDivElement | null) => {
+      if (businessSectionsRef) {
+        businessSectionsRef.current = node;
+      }
+
+      if (tiltRef) {
+        tiltRef.current = node;
+      }
+    },
+    [businessSectionsRef, tiltRef]
+  );
+
   return (
     <div className="container mx-auto py-20">
       <div className="">
@@ -66,25 +89,29 @@ const Experience = () => {
           customers pay with credit cards—secure and simple.
         </p>
         <div className="container mx-auto px-4 py-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto place-items-center">
+          <div
+            ref={cardsContainerRef}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto place-items-center"
+          >
             {cardData.map((card, index) => (
-              <Card
-                key={index}
-                icon={
-                  <Image
-                    src={card.icon}
-                    alt={card.iconAlt}
-                    width={48}
-                    height={48}
-                    className="text-accent"
-                  />
-                }
-                title={card.title}
-                titleLine2={card.titleLine2}
-                hoverTitle={card.hoverTitle}
-                hoverDescription={card.hoverDescription}
-                variant="hover"
-              />
+              <div key={index} className="card-wrapper">
+                <Card
+                  icon={
+                    <Image
+                      src={card.icon}
+                      alt={card.iconAlt}
+                      width={48}
+                      height={48}
+                      className="text-accent"
+                    />
+                  }
+                  title={card.title}
+                  titleLine2={card.titleLine2}
+                  hoverTitle={card.hoverTitle}
+                  hoverDescription={card.hoverDescription}
+                  variant="hover"
+                />
+              </div>
             ))}
           </div>
         </div>
@@ -97,27 +124,27 @@ const Experience = () => {
           </span>
         </h1>
         <div className="py-10 px-6 sm:px-0">
-          <div className="space-y-24">
+          <div ref={combinedRef} className="space-y-24">
             {Object.entries(businessData).map(([key, data], index) => (
               <div
                 key={key}
                 className={`flex flex-col ${
                   index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
-                } items-center gap-8 lg:gap-16`}
+                } items-center gap-8 lg:gap-16 animated-section`}
               >
                 {/* Image Section */}
-                <div className="w-full lg:w-1/2 flex justify-center">
+                <div className="w-full lg:w-1/2 flex justify-start from-left tilt-element overflow-hidden">
                   <Image
                     src={data.image}
                     alt={data.title}
-                    width={400}
-                    height={400}
+                    width={470}
+                    height={470}
                     className="rounded-lg"
                   />
                 </div>
 
                 {/* Content Section */}
-                <div className="w-full lg:w-[45%] space-y-6">
+                <div className="w-full lg:w-1/2 space-y-6 border-none border-red- rounded-4xl bg-secondary/40 min-h-72 p-8 from-right tilt-element">
                   <h2 className="text-3xl font-bold text-white">
                     {data.title}
                   </h2>

@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 // import { Geist, Geist_Mono } from "next/font/google";
 import { Outfit } from "next/font/google";
+import GsapProvider from "./providers/GsapProvider";
+import Navbar from "@/app/components/ui/navbar";
+import Footer from "@/app/components/ui/Footer";
 import "./globals.css";
 
 // const geistSans = Geist({
@@ -125,7 +128,15 @@ export default function RootLayout({
         // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         className={`${outfit.variable} antialiased`}
       >
-        {children}
+        <GsapProvider>
+          <div className="bg-background">
+            <main className="mx-auto">
+              <Navbar />
+              {children}
+              <Footer />
+            </main>
+          </div>
+        </GsapProvider>
       </body>
     </html>
   );

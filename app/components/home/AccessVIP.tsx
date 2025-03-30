@@ -1,7 +1,9 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import { Button } from "../ui/button";
 import Link from "next/link";
+import { useAccessAnimations } from "@/app/utils/animations/useAnimations";
 
 const accessContent = [
   {
@@ -23,14 +25,16 @@ const accessContent = [
 ];
 
 const AccessVIP = () => {
+  const animationRef = useAccessAnimations();
+
   return (
-    <div className="relative min-h-screen w-full">
+    <div className="relative min-h-screen w-full" ref={animationRef}>
       <div className="absolute inset-0 z-0">
         <Image
           src="/home/accessVIPBg.svg"
           alt="Hero Background"
           fill
-          className="object-cover"
+          className="object-cover access-bg"
           priority
         />
 
@@ -39,7 +43,7 @@ const AccessVIP = () => {
 
       <div className="relative z-10 container mx-auto px-4 h-screen flex flex-col justify-center">
         <div className="sm:mb-12">
-          <h1 className="text-3xl md:text-5xl font-normal text-white sm:mb-6 leading-14 text-center">
+          <h1 className="text-3xl md:text-5xl font-normal text-white sm:mb-6 leading-14 text-center access-title">
             Monetize Access. Unlock New Opportunities
           </h1>
         </div>
@@ -47,7 +51,7 @@ const AccessVIP = () => {
           {accessContent.map((section, index) => (
             <div
               key={index}
-              className="hover:bg-background/30 p-8 rounded-lg hvoer:backdrop-blur-sm"
+              className="hover:bg-background/30 p-8 rounded-lg hvoer:backdrop-blur-sm access-section"
             >
               <h2 className="text-4xl font-semibold text-white mb-2">
                 {section.title}
@@ -56,9 +60,9 @@ const AccessVIP = () => {
                 {section.descriptions.map((desc, idx) => (
                   <li
                     key={idx}
-                    className="text-2xl text-white/90 flex items-start"
+                    className="text-2xl text-white/90 flex items-start access-bullet"
                   >
-                    <span className="text-accent mr-2">•</span>
+                    <span className="text-accent mr-2 bullet-point">•</span>
                     {desc}
                   </li>
                 ))}
@@ -66,12 +70,19 @@ const AccessVIP = () => {
             </div>
           ))}
         </div>
-        <div className="text-center text-white text-3xl my-10">
+        <div className="text-center text-white text-3xl my-10 access-section">
           <h1>Just show your QR code at the entrance!</h1>
         </div>
-        <div className="text-center my-10">
+        <div
+          className="text-center my-10 access-section"
+          style={{ animationDelay: "0.4s" }}
+        >
           <Link href="https://portal.flexabledats.com/" target="_blank">
-            <Button variant="primary" size="lg">
+            <Button
+              variant="primary"
+              size="lg"
+              className="hover:scale-105 transition-transform duration-300"
+            >
               Sign Up
             </Button>
           </Link>

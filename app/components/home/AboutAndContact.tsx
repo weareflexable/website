@@ -1,35 +1,79 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import { Button } from "../ui/button";
 import Link from "next/link";
+import {
+  useTestimonialCarousel,
+  useTextEffectAnimation,
+  useTiltOnHover,
+} from "@/app/utils/animations/useAnimations";
+
+const testimonials = [
+  {
+    quote:
+      "Flexable has created passive income for my venue where I didn't know it existed before",
+    author: "Club Owner",
+    image: "/home/flexableCardBg.svg",
+  },
+  {
+    quote:
+      "We increased our revenue by 30% with minimal effort. The digital access tokens are brilliant!",
+    author: "Restaurant Manager",
+    image: "/home/flexableCardBg.svg",
+  },
+  {
+    quote:
+      "Our customers love skipping the line, and we love the additional revenue stream. Win-win!",
+    author: "Nightclub Director",
+    image: "/home/flexableCardBg.svg",
+  },
+];
 
 const AboutAndContact = () => {
+  const testimonialCarouselRef = useTestimonialCarousel(3);
+
+  const textAnimationRef = useTextEffectAnimation();
+
+  const buttonsTiltRef = useTiltOnHover(".tilt-element", 5);
+
   return (
     <div className="container mx-auto py-10 lg:py-28">
-      <div className="">
-        <h1 className="text-center text-white text-4xl sm:text-[55px]">
+      <div ref={textAnimationRef}>
+        <h1 className="text-center text-white text-4xl sm:text-[55px] animate-text">
           Why Flexable?
         </h1>
-        <h1 className="text-center text-white text-xl sm:text-[44px] py-4 sm:py-12">
+        <h1 className="text-center text-white text-xl sm:text-[44px] py-4 sm:py-12 animate-text">
           <span className="text-accent inline-block">Businesses - </span>Turn
           demand into revenue with ZERO upfront cost.
         </h1>
-        <h1 className="text-center text-white text-xl sm:text-[44px]">
+        <h1 className="text-center text-white text-xl sm:text-[44px] animate-text">
           <span className="text-accent inline-block">Consumers -</span> No wait
           times. No scams. Instant access.
         </h1>
 
-        <div className="md:flex items-center justify-center my-20 md:space-x-6 text-center">
-          <div className="">
+        <div
+          ref={buttonsTiltRef}
+          className="md:flex items-center justify-center my-20 md:space-x-6 text-center"
+        >
+          <div className="tilt-element">
             <Link href="https://portal.flexabledats.com/" target="_blank">
-              <Button variant="secondary" size="lg">
+              <Button
+                variant="secondary"
+                size="lg"
+                className="transition-all duration-300 hover:shadow-glow"
+              >
                 Business Sign Up
               </Button>
             </Link>
           </div>
-          <div className="mt-8 sm:mt-0">
+          <div className="mt-8 sm:mt-0 tilt-element">
             <Link href="https://marketplace.flexabledats.com/" target="_blank">
-              <Button variant="secondary" size="lg">
+              <Button
+                variant="secondary"
+                size="lg"
+                className="transition-all duration-300 hover:shadow-glow"
+              >
                 Consumer Sign Up
               </Button>
             </Link>
@@ -37,31 +81,41 @@ const AboutAndContact = () => {
         </div>
       </div>
 
-      <div className="flex justify-center items-center my-20 mx-4 sm:mx-0">
-        <div className="relative max-w-[555px] h-[358px] rounded-4xl overflow-hidden">
-          <div className="absolute inset-0 z-0">
-            <Image
-              src="/home/flexableCardBg.svg"
-              alt="Testimonial Background"
-              fill
-              className="object-cover"
-              priority
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-background/30 to-background/40"></div>
-          </div>
-
-          <div className="relative z-10 h-full flex flex-col justify-between px-8 md:px-16 py-12 md:p-20">
-            <div className="flex-1 flex items-center justify-center">
-              <h2 className="text-2xl md:text-3xl font-normal text-white leading-10 text-center">
-                &ldquo;Flexable has created passive income for my venue where I
-                didn&apos;t know it existed before&rdquo;
-              </h2>
+      {/* Testimonial Carousel */}
+      <div
+        ref={testimonialCarouselRef}
+        className="flex justify-center items-center my-20 mx-4 sm:mx-0 relative h-[370px]"
+      >
+        {testimonials.map((testimonial, index) => (
+          <div
+            key={index}
+            className="testimonial-card absolute w-full max-w-[555px] h-[358px] rounded-4xl overflow-hidden"
+          >
+            <div className="absolute inset-0 z-0">
+              <Image
+                src={testimonial.image}
+                alt="Testimonial Background"
+                fill
+                className="object-cover"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-b from-background/30 to-background/40"></div>
             </div>
-            {/* <div className="text-white text-xl md:text-3xl text-left">
-              <p>-Owner of XXX!</p>
-            </div> */}
+
+            <div className="relative z-10 h-full flex flex-col justify-between px-8 md:px-16 py-12 md:p-20">
+              <div className="flex-1 flex items-center justify-center">
+                <h2 className="text-2xl md:text-3xl font-normal text-white leading-10 text-center">
+                  &ldquo;{testimonial.quote}&rdquo;
+                </h2>
+              </div>
+              {testimonial.author && (
+                <div className="text-white text-xl md:text-3xl text-right mt-6">
+                  <p>- {testimonial.author}</p>
+                </div>
+              )}
+            </div>
           </div>
-        </div>
+        ))}
       </div>
 
       <div className="max-w-[555px] mx-auto pt-20">
@@ -131,7 +185,11 @@ const AboutAndContact = () => {
           </div>
 
           <div className="flex justify-center">
-            <Button type="submit" variant="primary">
+            <Button
+              type="submit"
+              variant="primary"
+              className="hover:shadow-glow transition-all duration-300"
+            >
               Send Message
             </Button>
           </div>

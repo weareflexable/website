@@ -74,14 +74,14 @@ const AccessVIP = () => {
           <h1>Just show your QR code at the entrance!</h1>
         </div>
         <div
-          className="text-center my-10 access-section"
+          className="text-center my-10 access-section tilt-element"
           style={{ animationDelay: "0.4s" }}
         >
           <Link href="https://portal.flexabledats.com/" target="_blank">
             <Button
               variant="primary"
               size="lg"
-              className="hover:scale-105 transition-transform duration-300"
+              className="hover:scale-105 transition-transform duration-300 hover:shadow-glow"
             >
               Sign Up
             </Button>

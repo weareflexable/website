@@ -163,12 +163,12 @@ const Experience = () => {
       </div>
       <div className="text-center md:space-x-14">
         <Link href="https://portal.flexabledats.com/" target="_blank">
-          <Button variant="primary" size="lg" className="w-56">
+          <Button variant="primary" size="lg" className="w-56 hover:shadow-glow">
             Business Sign Up
           </Button>
         </Link>
         <Link href="https://marketplace.flexabledats.com/" target="_blank">
-          <Button className="mt-6 w-56" variant="primary" size="lg">
+          <Button className="mt-6 w-56 hover:shadow-glow" variant="primary" size="lg">
             Consumer Sign Up
           </Button>
         </Link>

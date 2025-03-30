@@ -6,8 +6,10 @@ const accessContent = [
   {
     title: "Follow Us",
     items: [
-      { label: "Facebook", href: "#" },
+      { label: "X", href: "#" },
       { label: "Discord", href: "#" },
+      { label: "Instagram", href: "#" },
+      { label: "Telegram", href: "#" },
     ],
   },
   {

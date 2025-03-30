@@ -64,13 +64,13 @@ const Navbar = () => {
               Services
             </Link> */}
             <Link href="https://portal.flexabledats.com/" target="_blank">
-              <Button variant="primary" size="lg">
+              <Button variant="primary" size="lg" className="hover:shadow-glow">
                 Business Portal
               </Button>
             </Link>
 
             <Link href="https://marketplace.flexabledats.com/" target="_blank">
-              <Button variant="secondary" size="lg">
+              <Button variant="secondary" size="lg" className="hover:shadow-glow">
                 Marketplace
               </Button>
             </Link>
@@ -80,7 +80,7 @@ const Navbar = () => {
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden"
+            className="md:hidden hover:shadow-glow"
             onClick={toggleMobileMenu}
           >
             <svg
@@ -119,7 +119,7 @@ const Navbar = () => {
               className="w-full"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              <Button variant="primary" size="lg" className="w-48">
+              <Button variant="primary" size="lg" className="w-48 hover:shadow-glow">
                 Business Portal
               </Button>
             </Link>
@@ -130,7 +130,7 @@ const Navbar = () => {
               className="w-full"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              <Button variant="secondary" size="lg" className="w-48">
+              <Button variant="secondary" size="lg" className="w-48 hover:shadow-glow">
                 Marketplace
               </Button>
             </Link>

@@ -1,9 +1,10 @@
 "use client";
 import React, { useRef, useEffect } from "react";
-import Image from "next/image";
+// import Image from "next/image";
 import { Button } from "../ui/button";
 import Link from "next/link";
 import { gsap } from "gsap";
+import GlowingElement from "../ui/GlowingElement";
 
 const Hero = () => {
   const headingRef = useRef<HTMLHeadingElement>(null);
@@ -58,12 +59,14 @@ const Hero = () => {
     <div className="relative min-h-screen w-full">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <Image
-          src="/home/herobg.svg"
-          alt="Hero Background"
-          fill
-          className="object-cover"
-          priority
+        <video
+          src="/home/bgVideo.mp4"
+          // poster="/home/herobg.svg"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="object-cover w-full h-full"
         />
         {/* Purple Overlay */}
         <div
@@ -94,26 +97,34 @@ const Hero = () => {
         <div className="flex mx-auto w-full max-w-[1000px] justify-center items-center md:mt-20 2xl:ml-32 text-center">
           <div ref={buttonsRef} className="md:w-1/2">
             <div className="mb-8">
-              <Link href="https://portal.flexabledats.com/" target="_blank">
-                <Button
-                  variant="secondary"
-                  size="lg"
-                  className="text-lg sm:w-48"
-                >
-                  I&apos;m a Business
-                </Button>
-              </Link>
+              <GlowingElement glowColor="rgba(128, 90, 213, 0.4)" intensity={7}>
+                <Link href="https://portal.flexabledats.com/" target="_blank">
+                  <Button
+                    variant="secondary"
+                    size="lg"
+                    className="text-lg sm:w-48 hover:shadow-glow"
+                  >
+                    I&apos;m a Business
+                  </Button>
+                </Link>
+              </GlowingElement>
             </div>
 
             <div className="">
-              <Link
-                href="https://marketplace.flexabledats.com/"
-                target="_blank"
-              >
-                <Button variant="secondary" size="lg" className="text-lg w-48">
-                  I&apos;m a Consumer
-                </Button>
-              </Link>
+              <GlowingElement glowColor="rgba(255, 215, 0, 0.3)" intensity={7}>
+                <Link
+                  href="https://marketplace.flexabledats.com/"
+                  target="_blank"
+                >
+                  <Button
+                    variant="secondary"
+                    size="lg"
+                    className="text-lg w-48 hover:shadow-glow"
+                  >
+                    I&apos;m a Consumer
+                  </Button>
+                </Link>
+              </GlowingElement>
             </div>
           </div>
           <div ref={benefitsRef} className="hidden sm:block text-left">

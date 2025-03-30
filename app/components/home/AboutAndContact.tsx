@@ -184,11 +184,11 @@ const AboutAndContact = () => {
             ></textarea>
           </div>
 
-          <div className="flex justify-center">
+          <div className="flex justify-center tilt-element">
             <Button
               type="submit"
               variant="primary"
-              className="hover:shadow-glow transition-all duration-300"
+              className="hover:shadow-glow transition-all duration-300 hover:shadow-glow"
             >
               Send Message
             </Button>

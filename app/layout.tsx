@@ -4,6 +4,10 @@ import { Outfit } from "next/font/google";
 import GsapProvider from "./providers/GsapProvider";
 import Navbar from "@/app/components/ui/navbar";
 import Footer from "@/app/components/ui/Footer";
+import BackgroundEffect from "@/app/components/ui/BackgroundEffect";
+import CursorTracker from "@/app/components/ui/CursorTracker";
+import ScatteringParticles from "@/app/components/ui/ScatteringParticles";
+import TwinklingStars from "@/app/components/ui/TwinklingStars";
 import "./globals.css";
 
 // const geistSans = Geist({
@@ -129,8 +133,32 @@ export default function RootLayout({
         className={`${outfit.variable} antialiased`}
       >
         <GsapProvider>
-          <div className="bg-background">
-            <main className="mx-auto">
+          <CursorTracker
+            color="rgba(128, 90, 213, 0.5)"
+            size={24}
+            brightnessSize={400}
+            brightnessIntensity={0.2}
+          />
+          <div className="bg-background relative">
+            <TwinklingStars
+              count={150}
+              minSize={2}
+              maxSize={5}
+              twinkleSpeed={1.2}
+              repelRadius={180}
+              repelStrength={35}
+              shootingStarFrequency={0.25}
+            />
+            <BackgroundEffect intensity={4} />
+            <ScatteringParticles
+              count={18}
+              colors={["#805AD5", "#FFD700", "#9B59B6", "#F0B90B"]}
+              repelRadius={300}
+              repelStrength={30}
+              minSize={5}
+              maxSize={20}
+            />
+            <main className="mx-auto relative z-10">
               <Navbar />
               {children}
               <Footer />

@@ -85,7 +85,7 @@ const Experience = () => {
           <span className="text-2xl sm:text-3xl inline-block">
             Web2 simplicity
           </span>
-          . Businesses tokenize access using Digital Access Tokens (DATs) while
+          . Businesses tokenize access using Digital Access Tokens while
           customers pay with credit cards—secure and simple.
         </p>
         <div className="container mx-auto px-4 py-10">

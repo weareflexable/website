@@ -1,6 +1,8 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/app/components/ui/button";
 import { useAccessAnimations } from "@/app/utils/animations/useAnimations";
 
 const accessContent = [
@@ -69,6 +71,20 @@ const Access = () => {
               </ul>
             </div>
           ))}
+        </div>
+        <div
+          className="text-center my-10 access-section tilt-element"
+          style={{ animationDelay: "0.4s" }}
+        >
+          <Link href="https://portal.flexabledats.com/" target="_blank">
+            <Button
+              variant="primary"
+              size="lg"
+              className="hover:scale-105 transition-transform duration-300 hover:shadow-glow"
+            >
+              Sign Up
+            </Button>
+          </Link>
         </div>
       </div>
     </div>

@@ -54,7 +54,7 @@ const AboutAndContact = () => {
 
         <div
           ref={buttonsTiltRef}
-          className="md:flex items-center justify-center my-20 md:space-x-6 text-center"
+          className="md:flex items-center justify-center my-20 md:space-x-12 text-center"
         >
           <div className="tilt-element">
             <Link href="https://portal.flexabledats.com/" target="_blank">

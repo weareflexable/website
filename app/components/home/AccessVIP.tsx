@@ -44,7 +44,7 @@ const AccessVIP = () => {
       <div className="relative z-10 container mx-auto px-4 h-screen flex flex-col justify-center">
         <div className="sm:mb-12">
           <h1 className="text-3xl md:text-5xl font-normal text-white sm:mb-6 leading-14 text-center access-title">
-            Monetize Access. Unlock New Opportunities
+            Skip the Wait. Access VIP. Experience More.
           </h1>
         </div>
         <div className="hidden sm:grid grid-cols-1 md:grid-cols-2 gap-8 max-w-[1200px] mx-auto">

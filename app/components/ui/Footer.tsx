@@ -42,10 +42,7 @@ const Footer = () => {
       <div className="relative z-10 container mx-auto px-4 flex flex-col justify-center lg:pt-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-[1200px] mx-auto pb-40">
           {accessContent.map((section, index) => (
-            <div
-              key={index}
-              className="hover:bg-background/30 p-8 rounded-lg hover:backdrop-blur-sm"
-            >
+            <div key={index} className="p-8 rounded-lg hover:backdrop-blur-sm">
               <h2 className="text-2xl text-white mb-2">{section.title}</h2>
               <ul className="space-y-2">
                 {section.items.map((item, idx) => (

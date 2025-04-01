@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import Image from "next/image";
+// import Image from "next/image";
 import NumberCard from "../ui/number-card";
 import {
   useLineReveal,
@@ -39,14 +39,14 @@ const ForBusinesses: React.FC<ForBusinessesProps> = ({ data, title }) => {
       >
         {data.map((card, index) => (
           <div className="flex items-center" key={index}>
-            <div className="number-card-container">
+            <div className="">
               <NumberCard
                 number={card.number}
                 title={card.title}
                 description={card.description}
               />
             </div>
-            {index < data.length - 1 && (
+            {/* {index < data.length - 1 && (
               <div className="hidden md:flex items-center justify-center w-32 mb-40 arrow-container">
                 <Image
                   src="/home/whiteArrow.svg"
@@ -56,7 +56,7 @@ const ForBusinesses: React.FC<ForBusinessesProps> = ({ data, title }) => {
                   className="rotate-90 md:rotate-0"
                 />
               </div>
-            )}
+            )} */}
           </div>
         ))}
       </div>

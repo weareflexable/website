@@ -7,6 +7,7 @@
   --secondary: #491651;
   --secondary-light: #7320a4;
   --secondary-lighter: #b206cd;
+  --secondary-gray: #2E2F31;
 
   --success: #22c55e;
   --error: #ef4444;
@@ -19,6 +20,7 @@
   --color-secondary: var(--secondary);
   --color-secondary-light: var(--secondary-light);
   --color-secondary-lighter: var(--secondary-lighter);
+  --color-secondary-gray: var(--secondary-gray);
 
   --color-success: var(--success);
   --color-error: var(--error);
@@ -92,6 +94,6 @@ body {
 
 /* Add a hover shadow glow effect for buttons */
 .hover\:shadow-glow:hover {
-  box-shadow: 0 0 15px 5px rgba(255, 215, 0, 0.3);
+  box-shadow: 0 0 15px 5px rgba(246, 246, 244, 0.3);
   transform: translateY(-2px);
 }

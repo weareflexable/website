@@ -5,7 +5,7 @@ import GsapProvider from "./providers/GsapProvider";
 import Navbar from "@/app/components/ui/navbar";
 import Footer from "@/app/components/ui/Footer";
 import BackgroundEffect from "@/app/components/ui/BackgroundEffect";
-import CursorTracker from "@/app/components/ui/CursorTracker";
+// import CursorTracker from "@/app/components/ui/CursorTracker";
 import ScatteringParticles from "@/app/components/ui/ScatteringParticles";
 import TwinklingStars from "@/app/components/ui/TwinklingStars";
 import "./globals.css";
@@ -133,12 +133,12 @@ export default function RootLayout({
         className={`${outfit.variable} antialiased`}
       >
         <GsapProvider>
-          <CursorTracker
+          {/* <CursorTracker
             color="rgba(128, 90, 213, 0.5)"
             size={24}
             brightnessSize={400}
             brightnessIntensity={0.2}
-          />
+          /> */}
           <div className="bg-background relative">
             <TwinklingStars
               count={150}

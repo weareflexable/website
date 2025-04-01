@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import Image from "next/image";
+// import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/app/components/ui/button";
 import { useAccessAnimations } from "@/app/utils/animations/useAnimations";
@@ -33,20 +33,8 @@ const Access = () => {
   const animationRef = useAccessAnimations();
 
   return (
-    <div className="relative min-h-screen w-full" ref={animationRef}>
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/home/accessBg.svg"
-          alt="Hero Background"
-          fill
-          className="object-cover access-bg"
-          priority
-        />
-
-        <div className="absolute inset-0 bg-gradient-to-b from-background/70 to-background/70"></div>
-      </div>
-
-      <div className="relative z-10 container mx-auto px-4 h-screen flex flex-col justify-center">
+    <div className="my-20 w-full container mx-auto px-4" ref={animationRef}>
+      <div className="border-2 border-accent rounded-4xl py-4 md:py-10 z-10 md:mx-10 px-4 flex flex-col justify-center">
         <div className="mb-12 sm:mb-0">
           <h1 className="text-4xl md:text-5xl font-semibold sm:font-normal text-white sm:mb-6 sm:leading-14 text-center access-title">
             Monetize Access. Unlock New Opportunities.

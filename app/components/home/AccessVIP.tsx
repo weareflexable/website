@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import Image from "next/image";
+// import Image from "next/image";
 import { Button } from "../ui/button";
 import Link from "next/link";
 import { useAccessAnimations } from "@/app/utils/animations/useAnimations";
@@ -28,20 +28,8 @@ const AccessVIP = () => {
   const animationRef = useAccessAnimations();
 
   return (
-    <div className="relative min-h-screen w-full" ref={animationRef}>
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/home/accessVIPBg.svg"
-          alt="Hero Background"
-          fill
-          className="object-cover access-bg"
-          priority
-        />
-
-        <div className="absolute inset-0 bg-gradient-to-b from-background/70 to-background/70"></div>
-      </div>
-
-      <div className="relative z-10 container mx-auto px-4 h-screen flex flex-col justify-center">
+    <div className="my-20 w-full container mx-auto px-4" ref={animationRef}>
+      <div className="border-2 border-accent rounded-4xl py-4 md:py-10 z-10 md:mx-10 px-4 flex flex-col justify-center">
         <div className="sm:mb-12">
           <h1 className="text-3xl md:text-5xl font-normal text-white sm:mb-6 leading-14 text-center access-title">
             Skip the Wait. Access VIP. Experience More.
@@ -74,7 +62,7 @@ const AccessVIP = () => {
           <h1>Just show your QR code at the entrance!</h1>
         </div>
         <div
-          className="text-center my-10 access-section tilt-element"
+          className="text-center my-4 access-section tilt-element"
           style={{ animationDelay: "0.4s" }}
         >
           <Link href="https://portal.flexabledats.com/" target="_blank">

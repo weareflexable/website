@@ -139,7 +139,7 @@ const Experience = () => {
                     alt={data.title}
                     width={470}
                     height={470}
-                    className="rounded-lg"
+                    className="rounded-lg opacity-55"
                   />
                 </div>
 

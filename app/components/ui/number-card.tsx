@@ -12,38 +12,20 @@ const NumberCard: React.FC<NumberCardProps> = ({
   title,
   description,
 }) => {
-  const [isHovered, setIsHovered] = useState(false);
-
   return (
     <div className="flex flex-col items-center text-center space-y-6 p-6 rounded-lg transition-all duration-300">
-      <div
-        className="w-[100px] h-[100px] perspective-1000 cursor-pointer"
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-      >
+      <div className="w-[100px] h-[100px] perspective-1000 cursor-pointer">
         <div
-          className={`relative w-full h-full transition-transform duration-700 ease-out transform-style-3d ${
-            isHovered ? "rotate-y-180" : ""
-          }`}
+          className={`relative w-full h-full transition-transform duration-700 ease-out`}
         >
           {/* Front of circle */}
           <div className="absolute inset-0 backface-hidden">
             <Circle
-              className=""
               number={number}
               size={100}
               bgFrom="secondary"
               bgTo="secondary-light"
-            />
-          </div>
-          {/* Back of circle */}
-          <div className="absolute inset-0 backface-hidden rotate-y-180 rounded-full flex items-center justify-center">
-            <Circle
-              className=""
-              number={number}
-              size={100}
-              bgFrom="black"
-              bgTo="secondary-gray"
+              className="hover:shadow-glow"
             />
           </div>
         </div>

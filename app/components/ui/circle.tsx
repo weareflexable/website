@@ -24,7 +24,7 @@ const Circle: React.FC<CircleProps> = ({
       }}
     >
       <span
-        className={`text-white text-7xl ${className}`}
+        className={`text-white text-7xl `}
         // style={{
         //   textShadow:
         //     "2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000",

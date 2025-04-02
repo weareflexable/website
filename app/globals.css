@@ -1,13 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --primary: #350756;
+  --primary: #180327;
   --primary-foreground: #ffffff;
   --accent: #ffd700;
+  --accent-light: #998100;
   --secondary: #491651;
   --secondary-light: #7320a4;
   --secondary-lighter: #b206cd;
-  --secondary-gray: #2E2F31;
+  --secondary-gray: #2e2f31;
 
   --success: #22c55e;
   --error: #ef4444;
@@ -17,6 +18,7 @@
   --color-background: var(--primary);
   --color-foreground: var(--primary-foreground);
   --color-accent: var(--accent);
+  --color-accent-light: var(--accent-light);
   --color-secondary: var(--secondary);
   --color-secondary-light: var(--secondary-light);
   --color-secondary-lighter: var(--secondary-lighter);

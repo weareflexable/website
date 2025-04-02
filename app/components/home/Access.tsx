@@ -33,7 +33,7 @@ const Access = () => {
   const animationRef = useAccessAnimations();
 
   return (
-    <div className="my-20 w-full container mx-auto px-4" ref={animationRef}>
+    <div className="my-20 w-full container mx-auto px-4 relative" ref={animationRef}>
       <div className="border-2 border-accent rounded-4xl py-4 md:py-10 z-10 md:mx-10 px-4 flex flex-col justify-center">
         <div className="mb-12 sm:mb-0">
           <h1 className="text-4xl md:text-5xl font-semibold sm:font-normal text-white sm:mb-6 sm:leading-14 text-center access-title">
@@ -60,6 +60,15 @@ const Access = () => {
             </div>
           ))}
         </div>
+        <div
+          className="absolute -left-16 bottom-0 w-[500px] h-[400px] rounded-full pointer-events-none z-20"
+          style={{
+            background: `radial-gradient(ellipse at center, #621D88 0%, #621D88 20%, #621D88 40%, #621D88 60%, transparent 30%)`,
+            mixBlendMode: "screen",
+            opacity: 0.3,
+            filter: "blur(40px)",
+          }}
+        />
         <div
           className="text-center my-10 access-section tilt-element"
           style={{ animationDelay: "0.4s" }}

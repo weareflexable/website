@@ -38,7 +38,26 @@ const AboutAndContact = () => {
   const buttonsTiltRef = useTiltOnHover(".tilt-element", 5);
 
   return (
-    <div className="container mx-auto py-10 lg:py-28">
+    <div className="container mx-auto py-10 lg:py-28 relative">
+      {/* Decorative circles */}
+      {/* <div
+        className="absolute left-0 top-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full pointer-events-none z-20"
+        style={{
+          background: `radial-gradient(circle, rgba(98, 29, 136, 0.4) 0%, rgba(98, 29, 136, 0.4) 30%, rgba(98, 29, 136, 0.1) 50%, transparent 70%)`,
+          mixBlendMode: "screen",
+          opacity: 0.3,
+        }}
+      /> */}
+      <div
+        className="absolute -right-16 -top-44 w-[500px] h-[400px] rounded-full pointer-events-none z-20"
+        style={{
+          background: `radial-gradient(ellipse at center, #621D88 0%, #621D88 20%, #621D88 40%, #621D88 60%, transparent 30%)`,
+          mixBlendMode: "screen",
+          opacity: 0.3,
+          filter: "blur(40px)",
+        }}
+      />
+
       <div ref={textAnimationRef}>
         <h1 className="text-center text-white text-4xl sm:text-[55px] animate-text">
           Why Flexable?
@@ -194,6 +213,15 @@ const AboutAndContact = () => {
             </Button>
           </div>
         </form>
+        <div
+          className="absolute -left-16 -bottom-0 w-[500px] h-[400px] rounded-full pointer-events-none z-20"
+          style={{
+            background: `radial-gradient(ellipse at center, #621D88 0%, #621D88 20%, #621D88 40%, #621D88 60%, transparent 30%)`,
+            mixBlendMode: "screen",
+            opacity: 0.3,
+            filter: "blur(40px)",
+          }}
+        />
       </div>
     </div>
   );

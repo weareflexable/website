@@ -65,7 +65,7 @@ const AccessVIP = () => {
           className="text-center my-4 access-section tilt-element"
           style={{ animationDelay: "0.4s" }}
         >
-          <Link href="https://portal.flexabledats.com/" target="_blank">
+          <Link href="https://marketplace.flexabledats.com/" target="_blank">
             <Button
               variant="primary"
               size="lg"

@@ -68,7 +68,7 @@ const Experience = () => {
   );
 
   return (
-    <div className="container mx-auto py-20">
+    <div className="container mx-auto py-20 relative">
       <div className="">
         <h1 className="text-4xl sm:text-5xl text-white text-center">
           How It Works —{" "}
@@ -116,7 +116,7 @@ const Experience = () => {
           </div>
         </div>
       </div>
-      <div className="my-20 max-w-[1000px] mx-auto">
+      <div className="my-20 max-w-[1000px] mx-auto relative">
         <h1 className="text-4xl sm:text-5xl text-white text-center py-20">
           Sell More. Skip the Wait.{" "}
           <span className="inline-block text-accent underline decoration-3 underline-offset-[10px]">
@@ -161,14 +161,49 @@ const Experience = () => {
           </div>
         </div>
       </div>
+      <div
+        className="absolute -right-16 -top-0 w-[500px] h-[400px] rounded-full pointer-events-none z-20"
+        style={{
+          background: `radial-gradient(ellipse at center, #621D88 0%, #621D88 20%, #621D88 40%, #621D88 60%, transparent 30%)`,
+          mixBlendMode: "screen",
+          opacity: 0.3,
+          filter: "blur(40px)",
+        }}
+      />
+      <div
+        className="absolute -left-16 -top-1/2 w-[500px] h-[400px] rounded-full pointer-events-none z-20"
+        style={{
+          background: `radial-gradient(ellipse at center, #621D88 0%, #621D88 20%, #621D88 40%, #621D88 60%, transparent 30%)`,
+          mixBlendMode: "screen",
+          opacity: 0.3,
+          filter: "blur(40px)",
+        }}
+      />
+      <div
+        className="absolute -right-16 -bottom-0 w-[500px] h-[400px] rounded-full pointer-events-none z-20"
+        style={{
+          background: `radial-gradient(ellipse at center, #621D88 0%, #621D88 20%, #621D88 40%, #621D88 60%, transparent 30%)`,
+          mixBlendMode: "screen",
+          opacity: 0.3,
+          filter: "blur(40px)",
+        }}
+      />
       <div className="text-center md:space-x-14">
         <Link href="https://portal.flexabledats.com/" target="_blank">
-          <Button variant="primary" size="lg" className="w-56 hover:shadow-glow">
+          <Button
+            variant="primary"
+            size="lg"
+            className="w-56 hover:shadow-glow"
+          >
             Business Sign Up
           </Button>
         </Link>
         <Link href="https://marketplace.flexabledats.com/" target="_blank">
-          <Button className="mt-6 w-56 hover:shadow-glow" variant="primary" size="lg">
+          <Button
+            className="mt-6 w-56 hover:shadow-glow"
+            variant="primary"
+            size="lg"
+          >
             Consumer Sign Up
           </Button>
         </Link>

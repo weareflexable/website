@@ -31,7 +31,7 @@ const testimonials = [
 ];
 
 const AboutAndContact = () => {
-  const testimonialCarouselRef = useTestimonialCarousel(3);
+  const testimonialCarouselRef = useTestimonialCarousel(1);
 
   const textAnimationRef = useTextEffectAnimation();
 

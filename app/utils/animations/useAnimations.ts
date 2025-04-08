@@ -862,13 +862,13 @@ export const useTestimonialCarousel = (autoplaySpeed = 5) => {
     const createNavButtons = () => {
       const prevBtn = document.createElement("button");
       prevBtn.className =
-        "hidden absolute left-4 top-1/2 -translate-y-1/2 bg-background/20 backdrop-blur-sm w-10 h-10 rounded-full flex items-center justify-center hover:bg-accent/30 transition-colors z-20";
+        "absolute left-4 top-1/2 -translate-y-1/2 bg-background/20 backdrop-blur-sm w-10 h-10 rounded-full flex items-center justify-center hover:bg-accent/30 transition-colors z-20";
       prevBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white"><polyline points="15 18 9 12 15 6"></polyline></svg>`;
       prevBtn.setAttribute("aria-label", "Previous testimonial");
 
       const nextBtn = document.createElement("button");
       nextBtn.className =
-        "hidden absolute right-4 top-1/2 -translate-y-1/2 bg-background/20 backdrop-blur-sm w-10 h-10 rounded-full flex items-center justify-center hover:bg-accent/30 transition-colors z-20";
+        "absolute right-4 top-1/2 -translate-y-1/2 bg-background/20 backdrop-blur-sm w-10 h-10 rounded-full flex items-center justify-center hover:bg-accent/30 transition-colors z-20";
       nextBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white"><polyline points="9 18 15 12 9 6"></polyline></svg>`;
       nextBtn.setAttribute("aria-label", "Next testimonial");
 

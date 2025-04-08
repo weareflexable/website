@@ -28,13 +28,22 @@ const Footer = () => {
   return (
     <div className="relative w-full">
       <div className="absolute inset-0 z-0">
-        <Image
+      <video
+          src="/home/bgVideo.mp4"
+          // poster="/home/herobg.svg"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="object-cover w-full h-full"
+        />
+        {/* <Image
           src="/footerBg.svg"
           alt="Hero Background"
           fill
           className="object-cover"
           priority
-        />
+        /> */}
 
         <div className="absolute inset-0 bg-gradient-to-b from-background/30 to-background/30"></div>
       </div>

@@ -65,18 +65,6 @@ export const metadata: Metadata = {
         height: 630,
         alt: "Flexable ",
       },
-      {
-        url: "https://flexable.vercel.app/Flexable_og_alt.png",
-        width: 1200,
-        height: 630,
-        alt: "Flexable - Skip the Line",
-      },
-      {
-        url: "https://flexable.vercel.app/Flexable_og_square.png",
-        width: 800,
-        height: 800,
-        alt: "Flexable Logo",
-      },
     ],
     locale: "en_US",
     type: "website",
@@ -86,27 +74,11 @@ export const metadata: Metadata = {
     title: "Flexable",
     description:
       "Skip the line with Digital Access Tokens for exclusive venue experiences.",
-    images: [
-      "https://flexable.vercel.app/Flexable_meta-image.png",
-      "https://flexable.vercel.app/Flexable_twitter_card.png",
-    ],
+    images: ["https://flexable.vercel.app/Flexable_meta-image.png"],
     creator: "@flexabledats",
   },
   icons: {
-    icon: [
-      { url: "/favicon.ico" },
-      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-    ],
-    apple: [
-      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
-    ],
-    other: [
-      {
-        rel: "mask-icon",
-        url: "/safari-pinned-tab.svg",
-      },
-    ],
+    icon: [{ url: "/favicon.ico" }],
   },
   manifest: "/site.webmanifest",
   viewport: {

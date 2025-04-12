@@ -9,7 +9,7 @@ const accessContent = [
   {
     title: "New Revenue Streams",
     descriptions: [
-      "Monetize access - Earn more from what you already have—sell VIP access, line skips, premium tables, memberships, and event passes. Anything you want.",
+      "Monetize access, earning more from what you already have: sell VIP access, line skips, premium tables, memberships, and event passes. The options are limitless",
     ],
   },
   {

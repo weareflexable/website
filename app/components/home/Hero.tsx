@@ -94,7 +94,7 @@ const Hero = () => {
             </span>
           </h1>{" "}
         </div>
-        <div className="flex mx-auto w-full max-w-[1000px] justify-center items-center md:mt-20 2xl:ml-32 text-center">
+        <div className="flex mx-auto w-full max-w-[1000px] justify-center items-start md:mt-20 2xl:ml-32 text-center">
           <div ref={buttonsRef} className="md:w-1/2">
             <div className="mb-8">
               <GlowingElement glowColor="rgba(128, 90, 213, 0.4)" intensity={7}>

@@ -34,7 +34,7 @@ export const businessData = {
     title: "Events & Concerts",
     image: "/home/event.svg",
     benefits: [
-      "Organizers Prevent scalping and guarantee real ticket authenticity. Attendees enjoy a seamless, secure booking experience.",
+      "Organizers prevent scalping and guarantee real ticket authenticity. Attendees enjoy a seamless, secure booking experience.",
     ],
   },
   clubsAndMemberships: {
@@ -108,7 +108,7 @@ export const numberCardCustomerData = [
     number: 1,
     title: " Pick Your Venue",
     description:
-      "Sign up, browse exclusive offers from participating locations.",
+      "Sign up and browse exclusive offers from participating locations.",
   },
   {
     number: 2,
@@ -119,6 +119,6 @@ export const numberCardCustomerData = [
     number: 3,
     title: " Show QR Code",
     description:
-      "Scan your access token as a QR code and enjoy instant access.y",
+      "Scan your access token as a QR code and enjoy instant access.",
   },
 ];

@@ -6,16 +6,19 @@ const accessContent = [
   {
     title: "Follow Us",
     items: [
-      { label: "X", href: "#" },
-      { label: "Discord", href: "#" },
-      { label: "Instagram", href: "#" },
-      { label: "Telegram", href: "#" },
+      { label: "X", href: "https://x.com/flexabledats" },
+      { label: "Discord", href: "https://discord.gg/x4vqAJcYQC" },
+      { label: "Telegram", href: "https://t.me/addlist/j5XbOEV2Pj8wMDlk" },
+      // { label: "Telegram", href: "https://t.me/flexable_app" },
     ],
   },
   {
     title: "Read More",
     items: [
-      { label: "Docs", href: "#" },
+      {
+        label: "Docs",
+        href: "https://docs.google.com/document/d/1U9rN510ujnm4f933o61K-YiZIgcAHAHb/edit?tab=t.0",
+      },
       { label: "Terms & Conditions", href: "/terms" },
       { label: "Privacy Policy", href: "/privacy" },
     ],
@@ -28,7 +31,7 @@ const Footer = () => {
   return (
     <div className="relative w-full">
       <div className="absolute inset-0 z-0">
-      <video
+        <video
           src="/home/bgVideo.mp4"
           // poster="/home/herobg.svg"
           autoPlay
